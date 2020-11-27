@@ -23,6 +23,8 @@ img{
   font-family: 'NanumSquare', sans-serif;
   font-weight: 400;
   letter-spacing: -0.8px;
+  -ms-user-select: none; -moz-user-select: -moz-none; -webkit-user-select: none; -khtml-user-select: none; user-select:none;
+/*드래그 방지*/
 }
 
 #logo{ margin-top: 25px; margin-left:8px; }  /**/
@@ -53,28 +55,21 @@ img{
   position:fixed;
   height:90px;
   background-image: url("https://image.bugsm.co.kr/album/images/500/201932/20193267.jpg");
-
+  color: inherit;
   background-position:center;
-  overflow:hidden;
   background-size:100%;
-
+  -ms-user-select: none; -moz-user-select: -moz-none; -webkit-user-select: none; -khtml-user-select: none; user-select:none;
+/*드래그 방지*/
 }
 
 /*배경 블러처리*/
-.bgBlur:before{
-  content: '';
-  position: absolute;
-  top: 0; left:0; right:0; bottom:0;
-  background: inherit;
-  z-index:-4;
-  -webkit-filter: blur(8px);
-  -moz-filter: blur(10px);
-  -o-filter: blur(8px);
-  -ms-filter: blur(8px);
-  filter: url(#blur) grayscale(40%) brightness(120%) contrast(50%);
-  transform: translate(-20%, -30%);
-  width:160%;
-  height:185%;
+#playerBlur{
+  right:0; bottom:0; left:0;
+  position:fixed;
+  height:90px;
+  background-color: rgba(220,220,220,.45);
+  -webkit-backdrop-filter:blur(100px) saturate(70%);
+  backdrop-filter:blur(100px) saturate(70%) ;
 }
 
 /*앨범아트 부분*/
@@ -99,23 +94,85 @@ img{
   padding:10px;
   padding-top:26px;
   float:left;
+  opacity:0.8;
 }
-#songname{font-size:18px; font-weight: 600; padding-bottom:4px; color:#484848;}
-#artistname{font-size:16px; font-weight:300; color:#525252; }
+
+#songname{font-size:18px; font-weight: 600; padding-bottom:4px; color:#111111;}
+#artistname{font-size:16px; font-weight:300; color:#222222;}
 
 
 
 /*재생 슬라이드*/
 #playing_bar{
+
   position:absolute;
   left:382px;
   right:560px;
 
   height:90px;
-  padding:10px;
+
   padding-top:26px;
-  float:left;
+  float:right;
 }
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+
+
+input[type=range] {
+  -webkit-appearance: none;
+  margin: 10px 0;
+  width: 100%;
+
+}
+input[type=range]:focus {
+  outline: none;
+}
+
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 3px;
+  cursor: pointer;
+  border-radius: 7px;
+  background: #847C7F;
+  border: 0px;
+}
+input[type=range]::-webkit-slider-thumb {
+  border: 0px;
+  height: 20px;
+  width: 20px;
+  border-radius: 70px;
+  background: #fafafa;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -8.5px;
+  filter: drop-shadow(0px 0px 4px #847C7F);
+  -webkit-filter: drop-shadow(0px 0px 4px  #847C7F);
+}
+#bar{
+  width:90%;
+}
+#time{
+  width:90%;
+  height:30px;
+  opacity:0.8;
+}
+#ct{ /*현재 진행시간*/
+  width: 40px;
+  height:30px;
+  float:left;
+  padding: 3px;
+}
+#d{ /*총 재생시간*/
+  width:40px;
+  height:30px;
+  float:right;
+  text-align:right;
+  padding: 3px;
+}
+
+
+
+
 
 /*옵션-반복,셔플*/
 #option{
@@ -129,11 +186,11 @@ img{
 .repeat{
   padding-right: 5px;
   float:left;
-  opacity:80%;
+  opacity:0.8;
 }
 .shuffle{
   float:left;
-  opacity: 40%;
+  opacity: 0.4;
 }
 #volume{
   width:50px;
@@ -141,7 +198,7 @@ img{
   padding-top:20px;
   text-align: center;
   float:right;
-  opacity: 80%;
+  opacity: 0.8;
 }
 #controller{
     width:250px;
@@ -165,4 +222,5 @@ img{
   padding-top:15px;
   text-align: center;
   float:right;
+  opacity:0.8;
 }
