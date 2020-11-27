@@ -14,11 +14,12 @@ img{
 }
 /*왼쪽*/
 #leftside{
-  width:300px; height:100%;
+  width:300px; top:0px; left:0px;bottom:90px;
   background:#F6F6F6;
   position:fixed;
   border:0px;
   padding:0px;
+  overflow-y: auto;
   text-align:center;
   font-family: 'NanumSquare', sans-serif;
   font-weight: 400;
@@ -26,14 +27,14 @@ img{
   -ms-user-select: none; -moz-user-select: -moz-none; -webkit-user-select: none; -khtml-user-select: none; user-select:none;
 /*드래그 방지*/
 }
+/*메뉴 스크롤 */
+
 
 #logo{ margin-top: 25px; margin-left:8px; }  /**/
 #profile{ margin-top:10px; margin-bottom:5px; text-align:center;}
 
 .primage{
   border-radius: 70px;
-  -moz-border-radius: 70px;
-  -khtml-border-radius: 70px;
   -webkit-border-radius: 70px;
 }
 
@@ -69,9 +70,7 @@ img{
   height:90px;
   background-color: rgba(220,220,220,.45);
   -webkit-backdrop-filter:blur(100px) saturate(70%);
-  -ms-backdrop-filter:blur(100px) saturate(70%);
-  -moz-backdrop-filter:blur(100px) saturate(70%);
-  backdrop-filter:blur(100px) saturate(70%) ;
+  backdrop-filter:blur(100px) saturate(70%);
 }
 
 /*앨범아트 부분*/
@@ -116,37 +115,6 @@ img{
   padding-top:26px;
   float:right;
 }
-/*재생바 관련*/
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-input[type=range] {
-  -webkit-appearance: none;
-  margin: 10px 0;
-  width: 100%;
-
-}
-input[type=range]:focus {
-  outline: none;
-}
-input[type=range]::-webkit-slider-runnable-track {
-  width: 100%;
-  height: 3px;
-  cursor: pointer;
-  border-radius: 7px;
-  background: #847C7F;
-  border: 0px;
-}
-input[type=range]::-webkit-slider-thumb {
-  border: 0px;
-  height: 20px;
-  width: 20px;
-  border-radius: 70px;
-  background: #fafafa;
-  cursor: pointer;
-  -webkit-appearance: none;
-  margin-top: -8.5px;
-  filter: drop-shadow(0px 0px 4px #847C7F);
-  -webkit-filter: drop-shadow(0px 0px 4px  #847C7F);
-}
 
 #bar{
   width:90%;
@@ -154,7 +122,8 @@ input[type=range]::-webkit-slider-thumb {
 #time{
   width:90%;
   height:30px;
-  opacity:0.8;
+  opacity:0.9;
+  color:#505050;
 }
 #ct{ /*현재 진행시간*/
   width: 40px;
@@ -176,11 +145,12 @@ input[type=range]::-webkit-slider-thumb {
 
 /*옵션-반복,셔플*/
 #option{
-  width:150px;
+  text-align: right;
+  width:110px;
   height:90px;
-  padding:5px;
   padding-top:20px;
-  text-align: center;
+  padding-left:30px;
+
   float:right;
 }
 .repeat{
@@ -191,21 +161,43 @@ input[type=range]::-webkit-slider-thumb {
 .shuffle{
   float:left;
   opacity: 0.4;
+
 }
 #volume{
-  width:50px;
+  width:140px;
   height:90px;
   padding-top:20px;
   text-align: center;
   float:right;
-  opacity: 0.8;
 }
+
+#volume_popup{
+  width:155px;
+  height:45px;
+  position: fixed;
+  right:318px;
+  bottom: 132px;
+  border-radius: 20px;
+  background: #d0d0d0;
+  transform: rotate(270deg);
+  opacity:0.8;
+  display:none;
+}
+
+#aaa{
+  margin:20px;
+  margin-top:8.5px;
+  position:relative;
+}
+
 #controller{
-    width:250px;
+    padding-right:5px;
+    text-align:center;
+    width:220px;
     height:90px;
-    text-align: center;
     float:right;
 }
+
 .goforward{
 
 }

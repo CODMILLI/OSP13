@@ -40,18 +40,28 @@ function initialize(){
 
 
     $('#volume-input').val(Math.round(player.getVolume()));
-
-
 }
 
 
 
 // This function is called by initialize()
+var dur;
 function updateTimerDisplay(){
     // Update current time text display.
     $('#current-time').text(formatTime( player.getCurrentTime() ));
-    $('#duration').text(formatTime( player.getDuration() ));
+    dur=player.getDuration();
+    $('#duration').text(formatTime(dur));
 }
+
+function dragCalculation(input){
+  var a= parseInt(dur*input/100);
+  var min= parseInt(a/60);
+  var sec= a%60;
+  sec = sec < 10 ? '0' + sec : sec;
+  document.getElementById("current-time").innerText= min+":"+sec;
+}
+
+
 
 
 // This function is called by initialize()
@@ -71,22 +81,27 @@ $('#progress-bar').on('mouseup touchend', function (e) {
 
     // Skip video to new time.
     player.seekTo(newTime);
-
+    if(state==0){
+      playstate=1;
+      document.getElementById("play").src="playericon/일시정지.png"
+      state=1;
+    }
 });
 
-
 // Playback
+var state=0; //처음 재생때 드래그시 자동재생돼서 생기는 문제 해결 위함
+var playstate=0;
 
-var state=0;
 $('#play').on('click', function () {
     var b=document.getElementById("play");
-    if(state==0){
-      state=1;
+    if(playstate==0){
+      playstate=1;
       player.playVideo();
       b.src="playericon/일시정지.png"
+      state=1;
     }
     else {
-      state=0;
+      playstate=0;
       player.pauseVideo();
       b.src="playericon/재생.png"
     }
@@ -94,37 +109,67 @@ $('#play').on('click', function () {
 });
 
 
-// Sound volume
 
 
-$('#mute-toggle').on('click', function() {
+//볼륨창 조절
+$('#volume_bar').on('mouseup touchend', function(e) {
+    var newVolume = e.target.value;
+    player.setVolume(newVolume);
+});
+
+$('#volume_bar').on('mousemove', function(e) {
+    var newVolume = e.target.value;
+    player.setVolume(newVolume);
+}); //드래그도 바로 반영.
+
+//volume창 팝업 이벤트
+var volume_state=0;
+$('#volume').mouseover(function(){
+  if(volume_state==0){
+    volume_state=1;
+    $('#volume_popup').fadeIn('fast');
+  }
+});
+$('#container, #option, #controller, #playing_bar').mouseover(function(){
+  if(volume_state==1){
+    volume_state=0;
+    $('#volume_popup').fadeOut('fast');
+  }
+});
+
+
+
+//볼륨버튼 클릭시 음소거
+var savevolume;
+$('#volume').on('click', function() {
     var mute_toggle = $(this);
-
+    var b=document.getElementById("volumeicon");
     if(player.isMuted()){
+      b.src="playericon/volume.png";
+
         player.unMute();
-        mute_toggle.text('volume_up');
+        $('#volume_bar').val(savevolume);
+      
     }
     else{
+        savevolume = $('#volume_bar').val();
         player.mute();
-        mute_toggle.text('volume_off');
+        $('#volume_bar').val(0);
+        b.src="playericon/novolume.png";
+
+
     }
 });
 
-$('#volume-input').on('change', function () {
-    player.setVolume($(this).val());
-});
 
-
-// Other options
-
-
-$('#speed').on('change', function () {
-    player.setPlaybackRate($(this).val());
-});
-
-$('#quality').on('change', function () {
-    player.setPlaybackQuality($(this).val());
-});
+function volumeiconchange(input){
+    var b=document.getElementById("volumeicon");
+    if(input==0){
+        b.src="playericon/novolume.png";
+    }
+    else
+        b.src="playericon/volume.png";
+}
 
 
 // Playlist

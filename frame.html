@@ -4,6 +4,7 @@
 <title> MOODSIC Tracker:: </title>
 <link rel="stylesheet" type="text/css" href="entirestyle.css">
 <link rel="stylesheet" type="text/css" href="framestyle.css">
+<link rel="stylesheet" type="text/css" href="bar.css">
 </head>
 <body onload="changeScreenSize(500,300)">
   <div id="app">
@@ -47,7 +48,6 @@
 
     <!--페이지 내용-->
     <div id="container">
-
     </div>
 
     <!--밑에 재생바-->
@@ -66,12 +66,12 @@
 
       <div id="controller">
         <img src="playericon/앞으로.png" style="opacity:0.6" >
-        <img id="play" src="playericon/재생.png" height=95px style="opacity:0.9" onmouseover="this.style.opacity='1'" onmouseout = "this.style.opacity='0.9'">
+        <img id="play" src="playericon/재생.png" height=95px style="opacity:0.8" onmouseover="this.style.opacity='1'" onmouseout = "this.style.opacity='0.9'">
         <img src="playericon/뒤로.png" style="opacity:0.6">
       </div>
 
-      <div id="volume">
-        <img src="playericon\volume.png" height=50px>
+      <div id="volume"   style="opacity:0.7" onmouseover="this.style.opacity='0.8'" onmouseout = "this.style.opacity='0.7'">
+        <img id="volumeicon" src="playericon\volume.png" height=50px>
       </div>
 
       <div id="option">
@@ -80,16 +80,19 @@
       </div>
       <div id="playing_bar">  <!--재생바-->
         <div id="bar">
-          <input type="range" id="progress-bar" value="0">
+          <input type="range" id="progress-bar" value="0"  onInput="dragCalculation(this.value)">
         </div>
         <div id="time">   <!--시간진행도-->
           <div id="ct"><p id="current-time"></div>
           <div id="d"><p id="duration"></div>
         </div>
-        <div
-      </div>
+        </div>
+    </div>
+  </div>
+  <div id=volume_popup>
+    <div id=aaa>
+    <input id="volume_bar" type="range" oninput="volumeiconchange(this.value)">
 
-      </div>
     </div>
   </div>
   <div id="video-placeholder" style="opacity:0;" ></div> <!--음원 유튜브 iframe 대체-->
