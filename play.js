@@ -1,3 +1,4 @@
+//플레이어 재생 관련 기능
 var player,
     time_update_interval = 0;
 
