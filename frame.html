@@ -5,7 +5,7 @@
 <link rel="stylesheet" type="text/css" href="entirestyle.css">
 <link rel="stylesheet" type="text/css" href="framestyle.css">
 </head>
-<body>
+<body onload="changeScreenSize(500,300)">
   <div id="app">
     <!--왼쪽-->
     <div id="leftside">
@@ -41,17 +41,18 @@
         <div class="menu">
             <a href="home.html"><img src = "leftsideicon\메뉴_6.png" width="83%"></a>
         </div>
+
       </div>
     </div>
 
     <!--페이지 내용-->
     <div id="container">
-      <p> 야야~~ 야야야야~
-      블라블
+
     </div>
 
     <!--밑에 재생바-->
-    <div id="player" class="bgBlur">
+    <div id="player">
+      <div id="playerBlur">  <!--블러필터-->
       <div id="albumartarea">
         <a href="album_info.html"><img id="p_albumart" src="https://image.bugsm.co.kr/album/images/500/201932/20193267.jpg" width=70px ></a>
       </div>
@@ -64,9 +65,9 @@
       <div id="playlist"><img src="playericon\playlist.png" height=60px></div>
 
       <div id="controller">
-        <img src="playericon\앞으로.png" style="opacity:0.6">
-        <img src="playericon\재생.png" height=95px style="opacity:0.9">
-        <img src="playericon\뒤로.png" style="opacity:0.6">
+        <img src="playericon/앞으로.png" style="opacity:0.6" >
+        <img id="play" src="playericon/재생.png" height=95px style="opacity:0.9" onmouseover="this.style.opacity='1'" onmouseout = "this.style.opacity='0.9'">
+        <img src="playericon/뒤로.png" style="opacity:0.6">
       </div>
 
       <div id="volume">
@@ -77,15 +78,23 @@
         <div class="repeat">  <img src="playericon\repeat.png" height=50px></div>
         <div class="shuffle"><img src="playericon\shuffle.png" height=50px></div>
       </div>
-      <div id="playing_bar"></div>
+      <div id="playing_bar">  <!--재생바-->
+        <div id="bar">
+          <input type="range" id="progress-bar" value="0">
+        </div>
+        <div id="time">   <!--시간진행도-->
+          <div id="ct"><p id="current-time"></div>
+          <div id="d"><p id="duration"></div>
+        </div>
+        <div
+      </div>
+
+      </div>
     </div>
   </div>
+  <div id="video-placeholder" style="opacity:0;" ></div> <!--음원 유튜브 iframe 대체-->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script type="text/javascript" src ="play.js"> </script>
 </body>
-
-<!--블러처리 필터-->
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg">
-    <filter id="blur" x="0%" y="0%" width="100%" height="100%">
-        <feGaussianBlur stdDeviation="20" />
-    </filter>
-</svg>
 </html>
