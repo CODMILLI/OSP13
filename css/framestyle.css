@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream:framestyle.css
 @import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);﻿
 
 
@@ -372,7 +371,7 @@ img{
 #loop{
   padding-right: 5px;
   float:left;
-  
+
 }
 #shuffle{
   float:left;
@@ -432,4 +431,3 @@ img{
   float:right;
   opacity:0.8;
 }
->>>>>>> Stashed changes:css/framestyle.css
