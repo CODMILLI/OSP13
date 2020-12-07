@@ -21,7 +21,7 @@ for(var i=0;i<num;i++){
 function onYouTubeIframeAPIReady() {
     player = new YT.Player('video-placeholder', {
         width: 1,
-        height:0,
+        height:1,
         videoId: playlist[0][3],
         playerVars: {
             color: 'white',
@@ -37,9 +37,9 @@ function onYouTubeIframeAPIReady() {
 function initialize(){
   updateTimerDisplay();
   updateProgressBar();
-    player.cuePlaylist({playlist: youtubelist});
-    player.setPlaybackQuality('small');
-    player.setVolume(50);
+  player.cuePlaylist({playlist: youtubelist});
+  player.setPlaybackQuality('small');
+  player.setVolume(50);
     // Update the controls on load
 
 
@@ -170,13 +170,13 @@ $('#volume').on('click', function() {
     var b=document.getElementById("volumeicon");
     if(player.isMuted()){
       b.src="img/playericon/volume.png";
-
         player.unMute();
         $('#volume_bar').val(savevolume);
 
     }
     else{
         savevolume = $('#volume_bar').val();
+
         player.mute();
         $('#volume_bar').val(0);
         b.src="img/playericon/novolume.png";
