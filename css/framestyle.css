@@ -44,9 +44,11 @@ img{
 
 /*내용*/
 #container{
-  min-height: 600px;
-  padding-left: 310px;
-  background-color:#ffffff;
+  right:0;
+  left:300px;
+  bottom:90px;
+  top: 0;
+  position:fixed;
 }
 
 
@@ -152,7 +154,6 @@ img{
 #loop{
   padding-right: 5px;
   float:left;
-  
 }
 #shuffle{
   float:left;

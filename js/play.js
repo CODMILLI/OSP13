@@ -10,8 +10,9 @@ var list=[
 
 ["butterfly", "이달의 소녀", "https://cdnimg.melon.co.kr/cm/album/images/102/52/794/10252794_500.jpg?60cad57f0168f495cca7941da4fcdab5/melon/quality/80/optimize", "fvlbaW4YWf8"],
 
-["밤하늘의 별을", "경서", "https://cdnimg.melon.co.kr/cm2/album/images/105/18/234/10518234_20201113150500_500.jpg?14229bd15eb93dec69341e7d2a01e9ab/melon/quality/80/optimize", "S_0me7vYyeU"],
+["밤하늘의 별을", "경서", "https://cdnimg.melon.co.kr/cm2/album/images/105/18/234/10518234_20201113150500_500.jpg?14229bd15eb93dec69341e7d2a01e9ab/melon/quality/80/optimize", "S_0me7vYyeU"]
 ];
+
 var playlist=list;
 var youtubelist=[];
 for(var i=0;i<num;i++){
@@ -20,8 +21,9 @@ for(var i=0;i<num;i++){
 
 function onYouTubeIframeAPIReady() {
     player = new YT.Player('video-placeholder', {
-        width: 400,
-        height:300,
+
+        width: 1,
+        height:1,
         videoId: playlist[0][3],
         playerVars: {
             color: 'white',
@@ -37,9 +39,9 @@ function onYouTubeIframeAPIReady() {
 function initialize(){
   updateTimerDisplay();
   updateProgressBar();
-    player.cuePlaylist({playlist: youtubelist});
-    player.setPlaybackQuality('small');
-
+  player.cuePlaylist({playlist: youtubelist});
+  player.setPlaybackQuality('small');
+  player.setVolume(50);
     // Update the controls on load
 
 
@@ -132,11 +134,17 @@ $('#play').on('click', function () {
 //볼륨창 조절
 $('#volume_bar').on('mouseup touchend', function(e) {
     var newVolume = e.target.value;
+    if(player.isMuted()){
+        player.unMute();
+    }
     player.setVolume(newVolume);
 });
 
-$('#volume_bar').on('mousemove', function(e) {
+$('#volume_bar').on('click mousemove', function(e) {
     var newVolume = e.target.value;
+    if(player.isMuted()){
+        player.unMute();
+    }
     player.setVolume(newVolume);
 }); //드래그도 바로 반영.
 
@@ -164,10 +172,8 @@ $('#volume').on('click', function() {
     var b=document.getElementById("volumeicon");
     if(player.isMuted()){
       b.src="img/playericon/volume.png";
-
         player.unMute();
         $('#volume_bar').val(savevolume);
-
     }
     else{
         savevolume = $('#volume_bar').val();
