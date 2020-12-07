@@ -29,18 +29,18 @@
         <div class="menu">
         </div>
         <div class="menu">
-          <a href="home.html"><img src = "img/leftsideicon\메뉴_1.png" width="83%"></a>
-          <a href="diary.html"><img src = "img/leftsideicon\메뉴_2.png" width="83%"></a>
-          <a href="moodanalysis.html"><img src = "img/leftsideicon\메뉴_3.png" width="83%"></a>
+          <img id="home" src = "img/leftsideicon\메뉴_1.png" width="83%">
+          <img id="diary"src = "img/leftsideicon\메뉴_2.png" width="83%">
+          <img src = "img/leftsideicon\메뉴_3.png" width="83%">
         </div>
           <img src = "img/leftsideicon\메뉴_선.png" width="70%" style="opacity:0.5">
         <div class="menu">
-          <a href="home.html"><img src = "img/leftsideicon\메뉴_4.png" width="83%"></a>
-          <a href="home.html"><img src = "img/leftsideicon\메뉴_5.png" width="83%"></a>
+          <img src = "img/leftsideicon\메뉴_4.png" width="83%">
+        <img src = "img/leftsideicon\메뉴_5.png" width="83%">
         </div>
         <img src = "img/leftsideicon\메뉴_선.png" width="70%" style="opacity:0.5">
         <div class="menu">
-            <a href="home.html"><img src = "img/leftsideicon\메뉴_6.png" width="83%"></a>
+            <img src = "img/leftsideicon\메뉴_6.png" width="83%">
         </div>
 
       </div>
@@ -48,9 +48,8 @@
 
     <!--페이지 내용-->
     <div id="container">
-      <div id="video-placeholder" style="opacity: 0"></div>
-      <p id="change">
-      <p><!--음원 유튜브 iframe 대체-->
+      <iframe id="frame" src="home.html" width=100% height=100% frameborder=0px>
+      </iframe>
     </div>
 
     <!--밑에 재생바-->
@@ -99,8 +98,11 @@
     </div>
   </div>
 
+  <div id="video-placeholder" style="opacity: 0 ;"></div>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>  <!--유튜브 api-->
   <script src="https://www.youtube.com/iframe_api"></script> <!--유튜브 api-->
   <script type="text/javascript" src ="js/play.js"> </script>
+  <script type="text/javascript" src ="js/menu.js"> </script>
+
 </body>
 </html>
