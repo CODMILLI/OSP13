@@ -10,8 +10,9 @@ var list=[
 
 ["butterfly", "이달의 소녀", "https://cdnimg.melon.co.kr/cm/album/images/102/52/794/10252794_500.jpg?60cad57f0168f495cca7941da4fcdab5/melon/quality/80/optimize", "fvlbaW4YWf8"],
 
-["밤하늘의 별을", "경서", "https://cdnimg.melon.co.kr/cm2/album/images/105/18/234/10518234_20201113150500_500.jpg?14229bd15eb93dec69341e7d2a01e9ab/melon/quality/80/optimize", "S_0me7vYyeU"],
-]
+["밤하늘의 별을", "경서", "https://cdnimg.melon.co.kr/cm2/album/images/105/18/234/10518234_20201113150500_500.jpg?14229bd15eb93dec69341e7d2a01e9ab/melon/quality/80/optimize", "S_0me7vYyeU"]
+];
+
 var playlist=list;
 var youtubelist=[];
 for(var i=0;i<num;i++){
@@ -20,6 +21,7 @@ for(var i=0;i<num;i++){
 
 function onYouTubeIframeAPIReady() {
     player = new YT.Player('video-placeholder', {
+
         width: 1,
         height:1,
         videoId: playlist[0][3],
@@ -172,11 +174,9 @@ $('#volume').on('click', function() {
       b.src="img/playericon/volume.png";
         player.unMute();
         $('#volume_bar').val(savevolume);
-
     }
     else{
         savevolume = $('#volume_bar').val();
-
         player.mute();
         $('#volume_bar').val(0);
         b.src="img/playericon/novolume.png";
