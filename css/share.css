@@ -19,3 +19,7 @@ button {
   width: 15px;
   height: 15px;
 }
+
+#new-diary-info {
+  margin-bottom: 120px;
+}

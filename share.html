@@ -71,19 +71,20 @@
           <div class="md_content">
             <button id="close-modal">x</button>
             <div class="modal_text">
-              <form action="" id="md_form">
-                <div id="new-diary new-diary-name">
+              <form method="POST" action="process.php" id="md_form">
+                <div id="new-diary-name">
                   <label for="input_diary_name">제목</label> 
-                  <input type="text" class="md_input" equired>
+                  <input type="text" class="md_input md_input_title" name="title" equired>
                 </div>
                 <br>
-                <div id="new-diary new-diary-info">
+                <div id="new-diary-info">
                   <label for="input_diary_info">소개</label> 
-                  <input type="text" class="md_input" required>
+                  <input type="text" class="md_input md_input_info" name="info" required>
                 </div>
+                <input type="submit" class="create-btn" value="save">
               </form>
             </div>
-            <input type="submit" class="create-btn" value="생성">
+            
           </div>
         </div>
     </div>
