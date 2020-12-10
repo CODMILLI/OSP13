@@ -82,9 +82,6 @@
   display:inline;
 }
 
-.btn:hover {
-  background-position: right;
-}
 
 .bottomText {
   text-align: center;
