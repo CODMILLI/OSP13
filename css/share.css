@@ -1,0 +1,25 @@
+.share-content-container {
+  margin-top: 50px;
+}
+
+#search-btn-img {
+  padding-left: 3px;
+  width: 10px;
+  height: 10px;
+}
+
+button {
+  all: unset;
+  float: right;
+  padding-right: 100px;
+  opacity: 50%;
+}
+.add-btn {
+  margin-top: 40px;
+  width: 15px;
+  height: 15px;
+}
+
+#new-diary-info {
+  margin-bottom: 120px;
+}
