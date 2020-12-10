@@ -1,13 +1,3 @@
-button {
-  all: unset;
-  float: right;
-  padding-right: 100px;
-  opacity: 80%;
-}
-.add-btn {
-  width: 15px;
-  height: 15px;
-}
 .modal {
   position: fixed;
   top: 0;
