@@ -19,7 +19,7 @@ function validate() {
 
 
     if(em.value=="") {
-        alert("이메일을 입력해 주세요");
+        warning.innerHTML = "이메일을 입력해 주세요";
         em.focus();
         return false;
     }
