@@ -67,7 +67,7 @@ a {
 .song{
   padding-top:8px;
   width:350px;
-  height:28px;
+  height:30px;
 }
 .songname{
   height:14px;
@@ -77,14 +77,14 @@ a {
   font-size:14px;
 }
 .artistname{
-  padding-top:3px;
+  padding-top:3.5px;
   padding-left:10px;
   color: #707070;
   opacity:0.7;
   font-size:13px;
 }
 .article{
-  padding:5px;
+  padding:8px;
   color: #303030;
   height: 55px;
   width: 350px;
@@ -95,7 +95,7 @@ a {
 
 #list{
   position:fixed;
-  top:100; bottom:0;
+  top:80; bottom:0;
   left:550px;
   overflow:auto;
   width:800px;
