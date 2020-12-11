@@ -10,9 +10,9 @@ function login() {
     var userID = document.getElementById('input_id').value;
     var userPW = document.getElementById('input_pw').value;
 
-    firebase.auth().createUserWithEmailAndPassword(userID, userPW)
+    firebase.auth().signInWithEmailAndPassword(userID, userPW)
     .then((user) => {
-        alert(userID + " " + userPW);
+        location.href = "index.html";
     })
     .catch((error) => {
         var errorCode = error.code;
