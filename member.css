@@ -1,0 +1,112 @@
+
+
+*{
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+  font-family:sans-serif;
+  background-color: #F2F2F2;
+
+}
+
+
+.adminForm {
+  position:absolute;
+  width:300px;
+  height:400px;
+  padding: 20px, 20px;
+  background-color:#FFFFFF;
+  text-align:center;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  border-radius: 15px;
+  background-color: #F2F2F2;
+
+}
+
+.adminForm h2{
+  text-align: center;
+  margin: 30px;
+}
+
+.idForm{
+  border-bottom: 2px solid #adadad;
+  margin: 10px;
+  padding: 10px 10px;
+}
+
+
+.passForm{
+  border-bottom: 2px solid #adadad;
+  margin: 10px;
+  padding: 10px 10px;
+}
+
+.emailForm{
+  border-bottom: 2px solid #adadad;
+  margin: 10px;
+  padding: 10px 10px;
+}
+
+.birthForm{
+  border-bottom: 2px solid #adadad;
+  margin: 10px;
+  padding: 10px 10px;
+}
+
+.id {
+  border:none;
+  outline:none;
+  color: #636e72;
+  font-size:16px;
+  height:25px;
+  background: none;
+}
+
+.pw {
+  border:none;
+  outline:none;
+  color: #636e72;
+  font-size:14px;
+  height:25px;
+  background: none;
+}
+
+.em {
+  border:none;
+  outline:none;
+  color: #636e72;
+  font-size:14px;
+  height:25px;
+  background: none;
+}
+
+.bt {
+  border:none;
+  outline:none;
+  color: #636e72;
+  font-size:14px;
+  height:25px;
+  background: none;
+}
+
+.btn {
+  position:relative;
+  left:47%;
+  top:3%;
+  transform: translateX(-50%);
+  margin-bottom: 30px;
+  width:93%;
+  height:43px;
+  border-style: solid;
+  border-color: black;
+  border-width: thin;
+  border-radius: 10px 10px 10px 10px;
+  background-position: left;
+  background-size: 200%;
+  color:#6E6E6E;
+  font-weight: bold;
+  cursor:pointer;
+  display:inline;
+}
