@@ -15,7 +15,7 @@ p{
 .jeju{
   font-family: 'Jeju Myeongjo';
   color:#303030;
-  line-height: 1.3em;
+  line-height: 1.8em;
 }
 #wrapper{
   background-image:  url(https://cdnimg.melon.co.kr/cm2/album/images/103/46/650/10346650_500.jpg?14a08050b8c6adc879b6e0cf587d456a);
@@ -44,44 +44,22 @@ p{
 }
 
 
-
-
-
 #calander{
   position: fixed;
   left:0px;
   width:600px;
   height:100%;
   padding-bottom:30px;
+
 }
 
 #list{
+  background:red;
   position: fixed;
-  left:600px;
-  width:650px;
-  height:800px;
-  padding-bottom:30px;
-  overflow: scroll;
-
-
-
-}
-#bunddle{
-  float:left;
-  width: 100px;
-  height: 1000px;
-}
-#boxes{
-  float:left;
-  width: 500px;
-}
-.box{
-
-  margin:40px;
-  background-color: white;
-  opacity:0.5;
-  width:450px;
-  height:120px;
-  border-radius:25px;
+  top:0;
+  left:700px;
+  
+  height:700px;
+  overflow: auto;
 
 }
