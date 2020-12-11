@@ -23,3 +23,11 @@ button {
 #new-diary-info {
   margin-bottom: 120px;
 }
+
+#container {
+  right: 0;
+  left: 0;
+  bottom: 90px;
+  top: 0;
+  position: fixed;
+}

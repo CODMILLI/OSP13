@@ -45,10 +45,9 @@ h1 {
   height: 70%;
 }
 #md_form {
-  width: 80%;
+  width: 100%;
   margin: 0px;
   padding-top: 20px;
-  padding-left: 20px;
 }
 #new-diary {
   margin-top: 10px;

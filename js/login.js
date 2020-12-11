@@ -1,10 +1,18 @@
 firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
-      console.log("Alright!");
+        console.log("Alright!");
+
+        var user = firebase.auth().currentUser;
+
+        if (user) {
+        user.em
+        } else {
+        // No user is signed in.
+        }
     } else {
         console.log("Damn...");
     }
-  });
+  });  
 
 function login() {
     var userID = document.getElementById('input_id').value;
@@ -19,6 +27,13 @@ function login() {
         var errorMessage = error.message;
         console.log(errorCode + " : " +errorMessage);
     });
-
     
+}
+
+function logout() {
+    firebase.auth().signOut().then(function() {
+        location.href = "login.html";
+      }).catch(function(error) {
+        alert("failed to logout.");
+      });
 }
