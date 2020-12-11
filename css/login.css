@@ -1,0 +1,111 @@
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);﻿
+
+*{
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+  font-family:sans-serif;
+  background-color: #F2F2F2;
+
+}
+
+
+.loginForm {
+  font-family: 'Jeju Myeongjo';
+  color:#303030;
+  line-height: 1.3em;
+  position:absolute;
+  width:300px;
+  height:400px;
+  padding: 20px, 20px;
+  background-color:#FFFFFF;
+  text-align:center;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  border-radius: 15px;
+  background-color: #F2F2F2;
+
+}
+
+*{
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+  font-family:sans-serif;
+  background-color: #F2F2F2;
+
+}
+
+.loginForm h2{
+  text-align: center;
+  margin: 30px;
+}
+
+
+.idForm{
+  position:relative;
+  border-bottom: 2px solid #adadad;
+  margin: 10px;
+  padding: 10px 10px;
+}
+
+.passForm{
+  border-bottom: 2px solid #adadad;
+  margin: 10px;
+  padding: 10px 10px;
+}
+
+.id {
+  width: 100%;
+  border:none;
+  outline:none;
+  color: #636e72;
+  font-size:16px;
+  height:25px;
+  background: none;
+}
+
+.pw {
+  width: 100%;
+  border:none;
+  outline:none;
+  color: #636e72;
+  font-size:14px;
+  height:25px;
+  background: none;
+}
+
+.btn {
+  font-family: 'Jeju Myeongjo';
+  color:#303030;
+  line-height: 1.3em;
+  position:relative;
+  left:47%;
+  top:3%;
+  transform: translateX(-50%);
+  margin-bottom: 30px;
+  width:93%;
+  height:45px;
+  border-style: solid;
+  border-color: black;
+  border-width: thin;
+  border-radius: 10px 10px 10px 10px;
+  background-position: left;
+  background-size: 200%;
+  color:#6E6E6E;
+  font-weight: bold;
+  cursor:pointer;
+  display:inline;
+}
+
+
+.bottomText {
+  font-family: 'Jeju Myeongjo';
+  color:#303030;
+  line-height: 1.3em;
+  text-align: center;
+  font-size: 13px;
+  text-decoration-color: #6E6E6E;
+  text-decoration: underline;
+}

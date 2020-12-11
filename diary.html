@@ -54,9 +54,33 @@
 </body>
 <script type="text/javascript" src ="js/diary.js" charset="UTF-8"> </script>
 <script type="text/javascript" src ="js/calander.js" charset="UTF-8"> </script>
+
 <link rel="stylesheet" type="text/css" href="css/entirestyle.css">
 <link rel="stylesheet" type="text/css" href="css/diary.css">
 <link rel="stylesheet" type="text/css" href="css/calander.css">
 <link href="https://fonts.googleapis.com/earlyaccess/jejumyeongjo.css" rel="stylesheet">
+<!-- script part -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
 
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-firestore.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyCdgm-GsL3PSBJeiJdDXvpQ6Wvu12MChOo",
+        authDomain: "osp13-35ad5.firebaseapp.com",
+        projectId: "osp13-35ad5",
+        storageBucket: "osp13-35ad5.appspot.com",
+        messagingSenderId: "92580841928",
+        appId: "1:92580841928:web:8013e99ea0e7c2a41858fd"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+<script type="text/javascript" src ="js/calander.js"> </script>
+<script type="text/javascript" src ="js/login.js"> </script>
 </html>
