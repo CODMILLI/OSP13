@@ -1,0 +1,149 @@
+a {
+  text-decoration:none;
+  color: #414141;
+}
+
+.contentbox{
+    height:140px;
+}
+.daybox{
+  padding-left:10px;
+  width:50px;
+  height:110px;
+  float:left;
+}
+.il{
+  font-size: 35px;
+  line-height: 1.5em;
+  height:0px;
+  text-align:center;
+  color:#414141;
+  font-family:'Bahnschrift semicondensed';
+}
+.yoil{
+  line-height: 2em;
+  font-size:15px;
+  text-align:center;
+  color:#414141;
+}
+
+.bunddle{
+  opacity:0.8;
+  float:left;
+  height:140px;
+}
+.box{
+  float:left;
+  margin:5px;
+  margin-top:12px;
+  background: rgba(256,256,256,0.5);
+  width:530px;
+  height:120px;
+  border-radius:25px;
+
+}
+
+.tag{
+  float:right;
+  padding:5px;
+  padding-right:23px;
+  color:#575872;
+  opacity:0.5;
+  height:4px;
+  font-size:13px
+}
+.diaryimg{
+  padding:16px;
+  padding-left:30px;
+  float:left;
+  width:85px;
+}
+
+.dailylog{
+  float:left;
+  height:100;
+  opacity:0.7;
+}
+.song{
+  padding-top:8px;
+  width:350px;
+  height:28px;
+}
+.songname{
+  height:14px;
+  width:350px;
+  overflow:hidden;
+  font-weight:600;
+  font-size:14px;
+}
+.artistname{
+  padding-top:3px;
+  padding-left:10px;
+  color: #707070;
+  opacity:0.7;
+  font-size:13px;
+}
+.article{
+  padding:5px;
+  color: #303030;
+  height: 55px;
+  width: 350px;
+  font-size:14px;
+  margin-bottom:10px;
+  font-weight:500;
+}
+
+#list{
+  position:fixed;
+  top:100; bottom:0;
+  left:550px;
+  overflow:auto;
+  width:800px;
+}
+#calander{
+  box-sizing: border-box;
+  font-family: 'Jeju Myeongjo';
+  position:fixed;
+  left:0;
+  width:550px;
+  top:100px;
+  padding-left:80px;
+  padding-right:40px;
+}
+
+
+
+#wrapper{
+  background-image:  url(https://cdnimg.melon.co.kr/cm2/album/images/103/46/650/10346650_500.jpg?14a08050b8c6adc879b6e0cf587d456a);
+  position:fixed;
+  left:0px;
+  right:0px;
+  top:0px;
+  bottom:0px;
+  background-size: 100%;
+ background-repeat:no-repeat;
+
+}
+.blur{
+  position:fixed;
+  left:0;
+  top:0;
+  background-color: rgba(235,235,235,.5);
+  -webkit-backdrop-filter:blur(50px);
+  backdrop-filter:blur(50px);
+  width:100%;
+  height:100%;
+}
+
+#search{
+  width:1200px;
+  height: 90px;
+  left:0;
+  right:0;
+  top:0px;
+  height:90px;
+}
+
+.img10{
+  opacity:0.3;
+}

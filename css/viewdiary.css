@@ -1,0 +1,76 @@
+#writing{
+  position:fixed;
+  left:0;right:0;top:0;bottom:0;
+  background-color: #EAEAEA;
+}
+
+#image{
+  position:fixed;
+  left:0;top:0;bottom:0px;
+  width:450px;
+}
+#img{
+  position:fixed;
+  width:480px;
+  left:0;bottom:50px;
+  filter: drop-shadow(0px 0px 20px #999999);
+}
+
+#menu{
+  position:fixed;
+  top:0;
+  right:0;
+  height:50px;
+  width:500px;
+  height: 80px;
+}
+#date{
+  position:fixed;
+  height:80px;
+  left:600px; top:90px;
+  height:50px;
+  width:500px;
+  height: 80px;
+  font-size: 45px;
+  text-align: right;
+  padding-right: 0px;
+}
+#song{
+  position:fixed;
+  height:80px;
+  left:600px; top:170px;
+  width:500px;
+}
+#songname{
+  font-size:20px; font-weight:400;
+}
+#artistname{
+  padding-top:10px;
+  font-size:15px; font-weight:200; color:#909090;
+}
+#tag{
+  padding:10px;
+  position:fixed;
+  height:50px;
+  left:600px; top:260px;
+  width:500px;
+}
+.tag{
+    background: #d3d3d3;
+    border-radius:16px;
+    float:left;
+    padding:10px;
+    margin:5px;
+}
+#article{
+  color: #424242;
+  position:fixed;
+  height:334px;
+  left:600px; top:325px;
+  width:500px;
+  overflow: auto;
+  -ms-overflow-style: none; /* IE and Edge */
+}
+#article::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera*/
+}
