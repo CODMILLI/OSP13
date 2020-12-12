@@ -1,16 +1,16 @@
-
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);﻿
 
 *{
   margin: 0px;
   padding: 0px;
   text-decoration: none;
-  font-family:sans-serif;
   background-color: #F2F2F2;
-
 }
 
-
-.adminForm {
+.adminForm{
+  font-family: 'Jeju Myeongjo';
+  color:#303030;
+  line-height: 1.3em;
   position:absolute;
   width:300px;
   height:400px;
@@ -25,6 +25,13 @@
 
 }
 
+*{
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+  background-color: #F2F2F2;
+}
+
 .adminForm h2{
   text-align: center;
   margin: 30px;
@@ -32,27 +39,31 @@
 
 .idForm{
   border-bottom: 2px solid #adadad;
+  text-align: center;
   margin: 10px;
-  padding: 10px 10px;
+  padding:  10px 10px 10px 15px;
 }
 
 
 .passForm{
   border-bottom: 2px solid #adadad;
+  text-align: center;
   margin: 10px;
-  padding: 10px 10px;
+  padding: 10px 10px 10px 10px;
 }
 
 .emailForm{
   border-bottom: 2px solid #adadad;
+  text-align: center;
   margin: 10px;
-  padding: 10px 10px;
+  padding: 10px 10px 10px 0px;
 }
 
 .birthForm{
   border-bottom: 2px solid #adadad;
+  text-align: left;
   margin: 10px;
-  padding: 10px 10px;
+  padding: 10px 10px 10px 20px;
 }
 
 .id {
@@ -92,6 +103,9 @@
 }
 
 .btn {
+  font-family: 'Jeju Myeongjo';
+  color:#303030;
+  line-height: 1.3em;
   position:relative;
   left:47%;
   top:3%;
@@ -110,3 +124,4 @@
   cursor:pointer;
   display:inline;
 }
+

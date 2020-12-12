@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title> MOODSIC Tracker:: HOME </title>
 
 </head>
@@ -11,14 +10,18 @@
     <div class="blur">
       <div id="search">
       </div>
-      <div id ="calander" style="padding-left:50px;padding-right:50px;">
-        <div class="header" >
-            <div class="year-month"></div>
+      <div id ="calander" style="padding-left:80px;padding-right:30px;">
+        <div class="header">
+            <div>
+              <div id="month"></div>
+              <div id="year"></div>
+            </div>
+
             <div class="nav">
-    <button class="nav-btn go-prev" onclick="prevMonth()">&lt;</button>
-    <button class="nav-btn go-today" onclick="goToday()">Today</button>
-    <button class="nav-btn go-next" onclick="nextMonth()">&gt;</button>
-  </div>
+            <button class="nav-btn go-prev" onclick="prevMonth()">&lt;</button>
+            <button class="nav-btn go-today" onclick="goToday()">Today</button>
+            <button class="nav-btn go-next" onclick="nextMonth()">&gt;</button>
+        </div>
         </div>
         <div class="main">
             <div class="days">
@@ -30,7 +33,8 @@
                 <div class="day">Fri</div>
                 <div class="day">Sat</div>
             </div>
-            <div class="dates"></div>
+            <div class="dates">
+            </div>
         </div>
       </div>
       <div id ="list">
@@ -42,13 +46,14 @@
           <div class="box"></div>
           <div class="box"></div>
           <div class="box"></div>
-        
+
         </div>
       </div>
     </div>
   </div>
-
 </body>
+<script type="text/javascript" src ="js/diary.js" charset="UTF-8"> </script>
+<script type="text/javascript" src ="js/calander.js" charset="UTF-8"> </script>
 
 <link rel="stylesheet" type="text/css" href="css/entirestyle.css">
 <link rel="stylesheet" type="text/css" href="css/diary.css">
