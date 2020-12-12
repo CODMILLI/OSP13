@@ -4,7 +4,7 @@ a {
 }
 
 .contentbox{
-    height:140px;
+    height:150px;
 }
 .daybox{
   padding-left:10px;
@@ -30,7 +30,7 @@ a {
 .bunddle{
   opacity:0.8;
   float:left;
-  height:140px;
+  height:150px;
 }
 .box{
   float:left;
@@ -38,7 +38,7 @@ a {
   margin-top:12px;
   background: rgba(256,256,256,0.5);
   width:530px;
-  height:120px;
+  height:124px;
   border-radius:25px;
 
 }
@@ -53,21 +53,22 @@ a {
   font-size:13px
 }
 .diaryimg{
-  padding:16px;
-  padding-left:30px;
+  padding:20px;
+  padding-left:25px;
   float:left;
   width:85px;
 }
 
 .dailylog{
   float:left;
-  height:100;
+  height:95;
   opacity:0.7;
+  overflow:hidden;
 }
 .song{
-  padding-top:8px;
+  padding-top:7px;
   width:350px;
-  height:30px;
+  height:28px;
 }
 .songname{
   height:14px;
@@ -77,25 +78,26 @@ a {
   font-size:14px;
 }
 .artistname{
-  padding-top:3.5px;
+  padding-top:3.8px;
   padding-left:10px;
   color: #707070;
   opacity:0.7;
-  font-size:13px;
+  font-size:12px;
 }
 .article{
   padding:8px;
   color: #303030;
   height: 55px;
   width: 350px;
-  font-size:14px;
+  font-size:12px;
   margin-bottom:10px;
-  font-weight:500;
+  font-weight:400;
+  line-height: 1.4em;
 }
 
 #list{
   position:fixed;
-  top:80; bottom:0;
+  top:45; bottom:0;
   left:550px;
   overflow:auto;
   width:800px;
