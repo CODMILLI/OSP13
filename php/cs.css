@@ -146,6 +146,11 @@ a {
   height:90px;
 }
 
-.img10{
-  opacity:0.3;
+#bunddleline{
+  position:fixed;
+  left:607px;
+  width:50px;
+  bottom:0px;
+  top:45px;
+
 }

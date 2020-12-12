@@ -21,7 +21,7 @@
      </div>
     <div id="menu">
 			<?php
-				print "<a href=index.php?action=del&fname=".$this->myfile->getFileName().">삭제</a><br>";
+				print "<a href=index.php?action=del&user=".$this->myfile->user."&ym=".$this->myfile->ym."&fname=".$this->myfile->getFileName().">삭제</a><br>";
 			?>
 			<img id="more" src="img/more.png" style="width:40px;opacity:0.5;">
     </div>

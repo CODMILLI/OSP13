@@ -7,8 +7,9 @@
 
 <body>
 <h3><?php print $_GET['fname'] ?>일기쓰기</h3>
+<?php $str=substr($_GET['fname'],0,-4); ?>
 <form name="f1" action="index.php?action=write&user=<?php print $this->myfile->user?>&ym=<?php print $this->myfile->ym?>" method="post">
-날짜:<input type="text" name="fname" value=<?php print $_GET['fname']?>> (2020.12.01_Mon 의 형식으로 작성)
+날짜:<input type="text" name="fname" value=<?php print $str ?>> (2020.12.01_Mon 의 형식으로 작성)
 <br><br>태그<br>
 <textarea name="tag" rows="2" cols="45"></textarea><br>
 <br><br>내용<br>
