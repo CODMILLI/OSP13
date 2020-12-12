@@ -64,11 +64,14 @@
 .dates {
   display: flex;
   flex-flow: row wrap;
-  height: 500px;
+  height: 470px;
   font-size:11px;box-sizing: border-box;
+
 }
 
 .date {
   width: calc(100% / 7);
-  padding-right: 5px;box-sizing: border-box;
+  padding-right: 5px;
+  box-sizing: border-box;
+  height:30px;
 }

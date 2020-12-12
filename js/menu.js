@@ -5,7 +5,9 @@ $('#home').on('click', function () {
 
 $('#diary').on('click', function () {
   var b=document.getElementById("frame");
-  b.src="php/index.php?action=list"
+  var dt = new Date();
+  var today= dt.getFullYear()+'.'+(dt.getMonth()+1);
+  b.src="php/index.php?action=list&user=musicismylife&ym="+today;
 });
 
 

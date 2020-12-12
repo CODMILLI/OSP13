@@ -8,9 +8,9 @@ class Controller{
 	private $data;
 	private $content;
 
-	public function __construct($action){
+	public function __construct($action, $user, $ym){
 		$this->action = $action;
-		$this->myfile = new MyFile();
+		$this->myfile = new MyFile($user, $ym);
 	}
 
 	public function run(){
@@ -67,8 +67,10 @@ class Controller{
 	}
 
 	public function writeForm(){
+
 		$this->data = $this->myfile->flist(2);
 		$this->view = "write.php";
+
 	}
 }
 ?>
