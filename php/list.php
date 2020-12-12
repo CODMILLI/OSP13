@@ -125,7 +125,7 @@ const prevMonth = () => {
   if(month<10){
     month="0"+month;
   }
-  location.replace("index.php?action=list&user=musicismylife&ym="+year+"."+month);
+  location.replace("index.php?action=list&user=<?php print $this->myfile->user?>&ym="+year+"."+month);
   renderCalendar();
 
 }
@@ -137,7 +137,7 @@ const nextMonth = () => {
   if(month<10){
     month="0"+month;
   }
-  location.replace("index.php?action=list&user=musicismylife&ym="+year+"."+month);
+  location.replace("index.php?action=list&user=<?php print $this->myfile->user?>&ym="+year+"."+month);
   renderCalendar();
 }
 
