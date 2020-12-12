@@ -6,26 +6,30 @@
 class Myfile{
 
 	private $fDir;
-	private $userDir;
+	public $userDir;
 	public $ymDir;
 	private $fileName;
 	private $content;
 	private $tag;
+	public $user;
+	public $ym;
 
 
-	public function __construct(){
+	public function __construct($user, $ym){
 		$this->fDir = "contents";
 		if(!is_dir($this->fDir)){
 			mkdir($this->fDir);
 		}
-		$this->userDir = $this->fDir."/"."musicismylife";
+		$this->userDir = $this->fDir."/".$user;
 		if(!is_dir($this->userDir)){
 			mkdir($this->userDir);
 		}
-		$this->ymDir = $this->userDir."/"."2020.12";
+		$this->ymDir = $this->userDir."/".$ym;
 		if(!is_dir($this->ymDir)){
 			mkdir($this->ymDir);
 		}
+		$this->user=$user;
+		$this->ym=$ym;
 	}
 
 	/*public function __dayconstruct(){

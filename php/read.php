@@ -16,10 +16,15 @@
 		$dday=explode(".", $ddate[1]);
 		?>
       <div id="image">
-        <a href="index.php?action=list"><img id="back" src="img/left-arrow.png" style="opacity:0.3; width:50px; margin: 40px"></a>
+        <a href="index.php?action=list&user=<?php print $this->myfile->user?>&ym=<?php print $this->myfile->ym?>"><img id="back" src="img/left-arrow.png" style="opacity:0.3; width:50px; margin: 40px"></a>
         <?php print "<img id='img' src='".$content[3]."' width=250px>"?>
      </div>
-    <div id="menu"></div>
+    <div id="menu">
+			<?php
+				print "<a href=index.php?action=del&fname=".$this->myfile->getFileName().">삭제</a><br>";
+			?>
+			<img id="more" src="img/more.png" style="width:40px;opacity:0.5;">
+    </div>
 		<div id="date">
     <div class="date"><?php print $ddate[0]?></div>
 		<div class="date"><?php print strtoupper($dday[0])?></div>

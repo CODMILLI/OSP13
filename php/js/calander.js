@@ -41,10 +41,17 @@ const renderCalendar = () => {
 
   // Dates 정리
   dates.forEach((date, i) => {
-    dates[i] = `<div class="date" style="text-align: right;"> ${date}
-   <br>
-     <a id="imghref${date}" href="">
-      <img id="img${date}" src="img/calander_none.png" style="width:55px; height:55px; border-radius:70px; "></div></a>`;
+    dates[i] = `<div class="date" style="text-align: right;"> ${date}<br>`;
+    if(date!=" "){
+      dates[i]=dates[i]+`<a id="imghref${date}" href="">
+        <img id="img${date}" src="img/calander_none.png" style="width:55px; height:55px; border-radius:70px; "></div></a>`;
+    }
+    else {
+      dates[i]=dates[i]+"</div>";
+    }
+
+
+
   })
 
   // Dates 그리기
@@ -55,8 +62,10 @@ const renderCalendar = () => {
 renderCalendar();
 
 const prevMonth = () => {
+  location.replace("index.php?action=list&user=musicismylife&ym=2020.11");
   date.setMonth(date.getMonth() - 1);
   renderCalendar();
+
 }
 
 const nextMonth = () => {
