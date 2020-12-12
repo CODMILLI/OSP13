@@ -5,7 +5,7 @@ $('#home').on('click', function () {
 
 $('#diary').on('click', function () {
   var b=document.getElementById("frame");
-  b.src="diary.html"
+  b.src="php/index.php?action=list"
 });
 
 

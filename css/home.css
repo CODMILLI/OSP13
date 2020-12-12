@@ -19,16 +19,24 @@ p{
 }
 #wrapper{
   background-image:  url(../img/white.png),url(https://cdnimg.melon.co.kr/cm2/album/images/103/46/650/10346650_500.jpg?14a08050b8c6adc879b6e0cf587d456a);
-  background-size: 1800px 1300px, 1300px 1250px;
-  height:700px;
- background-repeat:no-repeat;
+  position:fixed;
+  left:0px;
+  right:0px;
+  top:0px;
+  bottom:0px;
+  background-size: 100%;
+  background-repeat:no-repeat;
 
 }
 .blur{
-  background-color: rgba(255,255,255,.3);
-  -webkit-backdrop-filter:blur(15px);
-  backdrop-filter:blur(15px);
-  height:600px;
+  position:fixed;
+  left:0;
+  top:0;
+  background-color: rgba(235,235,235,.3);
+  -webkit-backdrop-filter:blur(20px);
+  backdrop-filter:blur(50px);
+  width:100%;
+  height:100%;
 
 }
 
