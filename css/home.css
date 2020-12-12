@@ -7,7 +7,6 @@
 body{
   font-family: 'NanumSquare', sans-serif;
   font-weight: 300;
-
 }
 p{
     color:#303030;
@@ -26,6 +25,7 @@ p{
   bottom:0px;
   background-size: 100%;
   background-repeat:no-repeat;
+    overflow:auto;
 
 }
 .blur{
