@@ -23,9 +23,10 @@ function login() {
 
     firebase.auth().signInWithEmailAndPassword(userID, userPW)
     .then((user) => {
-        location.href = "realindex.php?user="+userID;
+        location.href = "index.html";
     })
     .catch((error) => {
+        alert("가입하지 않은 아이디이거나, 잘못된 비밀번호입니다.");
         var errorCode = error.code;
         var errorMessage = error.message;
         console.log(errorCode + " : " +errorMessage);
