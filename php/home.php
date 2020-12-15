@@ -21,7 +21,7 @@
      $arr = explode("&%$", $str);
    }
   else{
-    $arr=['','오늘 하루가 아직 기록되지 않았습니다. <br>MOODSIC으로 오늘 하루를 음악으로 기록해보세요!','-','-','img/none.jpeg'];
+    $arr=['','오늘의 일기가 아직 작성되지 않았습니다.<br>MOODSIC을 통해 오늘 하루를 음악으로 기록해보세요.','-','moodsic','img/none.jpeg'];
   }
    ?>
 
@@ -48,7 +48,7 @@
                 <p style="font-size:40px; width:300px;float:left; font-weight:400">오늘의 MOODSIC</p>
               </div>
               <div style="float:left; padding-top:5px; padding-top:24px; padding-left:10px;">
-                <a href="index.php?action=writeForm&user=ke@ewha.ac.kr&ym=<?php print $ym ?>&fname=<?php print $date ?>">
+                <a href="index.php?action=writeForm&user=<?php print $user?>&ym=<?php print $ym ?>&fname=<?php print $date ?>">
                   <img class="write" src="../img/write.png"></a></div>
             </div>
 
