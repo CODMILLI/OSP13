@@ -21,8 +21,8 @@
      </div>
     <div id="menu">
 			<?php
-				print "<a href=index.php?action=del&user=".$this->myfile->user."&ym=".$this->myfile->ym."&fname=".$this->myfile->getFileName()."><img src='img/trash.png' width=25px style='opacity:0.6'></a>&nbsp&nbsp";
-              print "<a href=index.php?action=writeForm&user=".$this->myfile->user."&ym=".$this->myfile->ym."&fname=".$this->myfile->getFileName()."><img src='img/edit.png' width=25px style='opacity:0.6'><br></a>";
+				print "<a href=index.php?action=del&user=".$this->myfile->user."&ym=".$this->myfile->ym."&fname=".$this->myfile->getFileName()."><img src='img/trash.png' width=25px style='opacity:0.2'></a>&nbsp&nbsp&nbsp";
+              print "<a href=index.php?action=writeForm&user=".$this->myfile->user."&ym=".$this->myfile->ym."&fname=".$this->myfile->getFileName()."><img src='img/edit.png' width=25px style='opacity:0.2'><br></a>";
       ?>
     </div>
 		<div id="date">
