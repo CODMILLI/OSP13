@@ -1,11 +1,13 @@
 firebase.auth().onAuthStateChanged(function(user) {
     var user_name = document.getElementById('user-name');
+    var b=document.getElementById("frame");
     if (user) {
         console.log("Alright!");
 
         var user = firebase.auth().currentUser;
 
         if (user) {
+          b.src="php/home.php?user="+user.email;
             user_name.innerHTML = user.email;
         } else {
         // No user is signed in.
