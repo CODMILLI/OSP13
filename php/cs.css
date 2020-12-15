@@ -1,3 +1,7 @@
+
+*{
+  font-family: 'Jeju Myeongjo';
+}
 a {
   text-decoration:none;
   color: #414141;
@@ -116,15 +120,12 @@ a {
 
 
 #wrapper{
-  background-image:  url(https://cdnimg.melon.co.kr/cm2/album/images/103/46/650/10346650_500.jpg?14a08050b8c6adc879b6e0cf587d456a);
+
   position:fixed;
   left:0px;
   right:0px;
   top:0px;
   bottom:0px;
-  background-size: 100%;
- background-repeat:no-repeat;
-
 }
 .blur{
   position:fixed;
@@ -138,19 +139,9 @@ a {
 }
 
 #search{
-  width:1200px;
-  height: 90px;
-  left:0;
-  right:0;
-  top:0px;
-  height:90px;
-}
-
-#bunddleline{
-  position:fixed;
-  left:607px;
-  width:50px;
-  bottom:0px;
-  top:45px;
-
+  position: fixed;
+    width:500px;
+    height: 80px;
+    top:30px;
+    left:60px;"
 }

@@ -1,4 +1,16 @@
-
+<?php   date_default_timezone_set('Asia/Seoul');
+   $user= $_GET['user'];
+   $dir="contents/".$user;
+   $ym=date("Y.m");
+   $dat=date('Y.m.d_D').".txt";
+   if(file_exists($dir."/".$ym."/".$dat)){
+     $str = file_get_contents($dir."/".$ym."/".$dat);		//현재 소스파일과 위치가 다르기 때문에 경로를 지정하여
+     $arr = explode("&%$", $str);
+   }
+  else{
+    $arr=['','','','','img/none.png'];
+  }
+    ?>
 <html>
 <head>
   <link rel="stylesheet" type="text/css" href="cs.css">
@@ -6,16 +18,17 @@
   <link href="https://fonts.googleapis.com/earlyaccess/jejumyeongjo.css" rel="stylesheet">
 </head>
 <body>
-  <div id="wrapper">
+  <div id="wrapper" style=" background-image:  url(<?php print $arr[4]?>);
+    background-size: 100%;
+   background-repeat:no-repeat;">
   <div class="blur">
     <div id="search">
-
+            <img src="img/search.png" width=420px>
+    </div>
   <?php
   $calym=$this->myfile->ymDir;
   $calym=explode("/",$calym);
   $calym=explode(".",$calym[2]);
-  print "<h3>다이어리</h3>";
-  print "<a href='index.php?action=writeForm&user=".$this->myfile->user."&ym=".$this->myfile->ym."&fname=2020.12.28_Fri.txt'>일기쓰기</a><br><br>";
   ?>
 <div id="calander" >
   <div class="header">
@@ -96,8 +109,10 @@ const renderCalendar = () => {
   dates.forEach((date, i) => {
     dates[i] = `<div class="date" style="text-align: right;"> ${date}<br>`;
     if(date!=" "){
-      var insert= (date<10)? "0"+date :date;
-      dates[i]=dates[i]+`<a id="imghref${date}" href="index.php?action=writeForm&user=<?php print $this->myfile->user?>&ym=<?php print $this->myfile->ym?>&fname=<?php print $this->myfile->ym ?>.${insert}_${yoil[(i%7)]}.txt">
+      if (date<10){
+        date='0'+date;
+      }
+      dates[i]=dates[i]+`<a id="imghref${date}" href="index.php?action=writeForm&user=<?php print $this->myfile->user?>&ym=<?php print $this->myfile->ym?>&fname=<?php print $this->myfile->ym?>.${date}_${yoil[i%7]}.txt">
         <img id="img${date}" src="img/calander_none.png" style="width:55px; height:55px; border-radius:70px; "
 onmouseover="this.src='img/calander_add.png'" onmouseout="this.src='img/calander_none.png'"></div></a>`;
     }
@@ -105,8 +120,8 @@ onmouseover="this.src='img/calander_add.png'" onmouseout="this.src='img/calander
       dates[i]=dates[i]+"</div>";
     }
     const today= new Date();
-    if(viewMonth == today.getMonth && viewYear == today.getFullYear){
-      document.getElementById('imghref'+today.getDate()).src="씨앙";
+    if(viewMonth === today.getMonth && viewYear === today.getFullYear){
+      document.getElementById(`imghref${today.getDate()}`).src="씨앙";
     }
 
   })
@@ -125,7 +140,7 @@ const prevMonth = () => {
   if(month<10){
     month="0"+month;
   }
-  location.replace("index.php?action=list&user=<?php print $this->myfile->user?>&ym="+year+"."+month);
+  location.replace("index.php?action=list&user=<?php print $user?>&ym="+year+"."+month);
   renderCalendar();
 
 }
@@ -137,7 +152,7 @@ const nextMonth = () => {
   if(month<10){
     month="0"+month;
   }
-  location.replace("index.php?action=list&user=<?php print $this->myfile->user?>&ym="+year+"."+month);
+  location.replace("index.php?action=list&user=<?php print $user?>&ym="+year+"."+month);
   renderCalendar();
 }
 
@@ -153,13 +168,12 @@ const goToday = () => {
   if(month<10){
     month="0"+month;
   }
-  location.replace("index.php?action=list&user=musicismylife&ym="+year+"."+month);
+  location.replace("index.php?action=list&user=<?php print $user?>&ym="+year+"."+month);
   renderCalendar();
 }
 
 </script>
 
-<img id='bunddleline' src='img/full_bunddle.png'>
 <div id="list">
 <?php
 foreach ($this->data as $f){
@@ -175,6 +189,7 @@ foreach ($this->data as $f){
     <p class='il'>".$day[0]."
     <p class='yoil'>".$day[1]."
     </div>
+    </a>
     <img class='bunddle' src='img/bunddle.png'>
       <a href=index.php?action=read&user=".$this->myfile->user."&ym=".$this->myfile->ym."&fname=".$f."><div class='box'>
       <div class='tag'>".$content[0]."</div>
@@ -190,10 +205,10 @@ foreach ($this->data as $f){
   </div>";
   print "
   <script type='text/javascript'>
-      document.getElementById('img".(int)$day[0]."').src= '".$content[4]."';
-      document.getElementById('img".(int)$day[0]."').onmouseover='';
-      document.getElementById('img".(int)$day[0]."').onmouseout='';
-      document.getElementById('imghref".(int)$day[0]."').href= 'index.php?action=read&user=".$this->myfile->user."&ym=".$this->myfile->ym."&fname=".$f."';
+      document.getElementById('img".$day[0]."').src= '".$content[4]."';
+      document.getElementById('img".$day[0]."').onmouseover='';
+      document.getElementById('img".$day[0]."').onmouseout='';
+      document.getElementById('imghref".$day[0]."').href= 'index.php?action=read&user=".$this->myfile->user."&ym=".$this->myfile->ym."&fname=".$f."';
   </script>
   ";
 

@@ -13,7 +13,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     } else {
         console.log("Damn...");
     }
-  });  
+  });
 
 function login() {
     var userID = document.getElementById('input_id').value;
@@ -21,14 +21,14 @@ function login() {
 
     firebase.auth().signInWithEmailAndPassword(userID, userPW)
     .then((user) => {
-        location.href = "index.html";
+        location.href = "realindex.php?user="+userID;
     })
     .catch((error) => {
         var errorCode = error.code;
         var errorMessage = error.message;
         console.log(errorCode + " : " +errorMessage);
     });
-    
+
 }
 
 function logout() {
