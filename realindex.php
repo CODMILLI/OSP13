@@ -2,34 +2,10 @@
 <html>
 <head>
 <title> MOODSIC Tracker:: </title>
-
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel="stylesheet" type="text/css" href="css/entirestyle.css">
 <link rel="stylesheet" type="text/css" href="css/framestyle.css">
 <link rel="stylesheet" type="text/css" href="css/bar.css">
-<!-- script part -->
-  <!-- The core Firebase JS SDK is always required and must be listed first -->
-  <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
-
-  <!-- TODO: Add SDKs for Firebase products that you want to use
-      https://firebase.google.com/docs/web/setup#available-libraries -->
-  <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-firestore.js"></script>
-
-  <script>
-    // Your web app's Firebase configuration
-    var firebaseConfig = {
-      apiKey: "AIzaSyCdgm-GsL3PSBJeiJdDXvpQ6Wvu12MChOo",
-      authDomain: "osp13-35ad5.firebaseapp.com",
-      projectId: "osp13-35ad5",
-      storageBucket: "osp13-35ad5.appspot.com",
-      messagingSenderId: "92580841928",
-      appId: "1:92580841928:web:8013e99ea0e7c2a41858fd"
-    };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-  </script>
-    <script type="text/javascript" src ="js/login.js"  charset=utf-8> </script>
 </head>
 <body>
   <div id="app">
@@ -43,8 +19,8 @@
       <!--프로필-->
       <div id="profile">
         <a href="mypage.html"><img class="primage" src = "https://cdnimg.melon.co.kr/cm2/artistcrop/images/002/61/143/261143_20200508100949_500.jpg?8671d10093fd10038301e96ebcd9a8fd62/melon/resize/416/quality/100/optimize" width="100px" ><br></a>
-        <p id="user-name" style="letter-spacing:0; font-size:17px; padding-top:12px; opacity:0.7">님</p>
-        <p id="times" style="font-size:14px; padding-top:5px;opacity:0.4; padding-bottom:10px;"> 이번 달 기록 8회 </p>
+        <p id="user-name" style="letter-spacing:0; font-size:17px; padding-top:12px; opacity:0.7"></p>
+        <p id="times" style="font-size:14px; padding-top:5px;opacity:0.4; padding-bottom:10px;"></p>
 
           <!-- 드롭다운 파트 -->
             <a class="dropdown-item" href="#">프로필 편집</a>
@@ -77,7 +53,7 @@
 
     <!--페이지 내용-->
     <div id="container">
-      <iframe id="frame" src="" width=100% height=100% frameborder=0px>
+      <iframe id="frame" <?php print "src=php/home.php?user=".$_GET['user']?> width=100% height=100% frameborder=0px>
       </iframe>
     </div>
 
@@ -124,12 +100,33 @@
   <div id=volume_popup>
     <div id=aaa>
     <input id="volume_bar" type="range" oninput="volumeiconchange(this.value)">
-
     </div>
   </div>
 
   <div id="video-placeholder" style="opacity: 0 ;"></div>
+  <!-- script part -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
 
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-firestore.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyCdgm-GsL3PSBJeiJdDXvpQ6Wvu12MChOo",
+        authDomain: "osp13-35ad5.firebaseapp.com",
+        projectId: "osp13-35ad5",
+        storageBucket: "osp13-35ad5.appspot.com",
+        messagingSenderId: "92580841928",
+        appId: "1:92580841928:web:8013e99ea0e7c2a41858fd"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+      <script type="text/javascript" src ="js/login.js"  charset=utf-8> </script>
 
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>  <!--유튜브 api-->
   <script src="https://www.youtube.com/iframe_api"></script> <!--유튜브 api-->

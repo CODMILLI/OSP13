@@ -1,14 +1,8 @@
-
-* {
-  font-family: 'Jeju Myeongjo';
-}
-
-
-
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;box-sizing: border-box;
+  font-family: 'Jeju Myeongjo';
 }
 
 
@@ -27,6 +21,7 @@
   display: flex;
   border: 1px solid #333333;
   border-radius: 5px;box-sizing: border-box;
+  font-family: 'Jeju Myeongjo';
 }
 
 .nav-btn {
@@ -37,12 +32,14 @@
   line-height: 34px;
   background-color: transparent;
   cursor: pointer;box-sizing: border-box;
+  font-family: 'Jeju Myeongjo';
 }
 
 .go-today {
   width: 75px;
   border-left: 1px solid #333333;
   border-right: 1px solid #333333;box-sizing: border-box;
+    font-family: 'Jeju Myeongjo';
 }
 
 .days {
@@ -51,6 +48,7 @@
   border-bottom: 1px solid #353535;
   height: 25px;
   margin-bottom: 10px;box-sizing: border-box;
+    font-family: 'Jeju Myeongjo';
 }
 
 .day {
@@ -58,6 +56,7 @@
   text-align: center;
   font-size:15px;
   box-sizing: border-box;
+    font-family: 'Jeju Myeongjo';
 
 }
 
@@ -66,6 +65,7 @@
   flex-flow: row wrap;
   height: 470px;
   font-size:11px;box-sizing: border-box;
+    font-family: 'Jeju Myeongjo';
 
 }
 
@@ -74,4 +74,5 @@
   padding-right: 5px;
   box-sizing: border-box;
   height:30px;
+    font-family: 'Jeju Myeongjo';
 }

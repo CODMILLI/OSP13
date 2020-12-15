@@ -1,0 +1,122 @@
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);﻿
+/** import 영역 **/
+@import url(//fonts.googleapis.com/earlyaccess/jejumyeongjo.css);
+
+*{
+    overflow:auto;
+}
+
+body{
+  font-family: 'NanumSquare', sans-serif;
+  font-weight: 300;
+
+}
+p{
+    color:#303030;
+}
+.jeju{
+  font-family: 'Jeju Myeongjo';
+  color:#303030;
+  line-height: 1.3em;
+}
+#wrapper{
+  position:fixed;
+  left:0px;
+  right:0px;
+  top:0px;
+  bottom:0px;
+}
+.blur{
+  position:fixed;
+  left:0;
+  top:0;
+  background-color: rgba(235,235,235,.3);
+  -webkit-backdrop-filter:blur(20px);
+  backdrop-filter:blur(20px);
+  width:100%;
+  height:100%;
+}
+
+#search{
+  width:1200x;
+  height: 90px;
+  left:0;
+  right:0;
+}
+#area1{
+  padding-left:80px;
+  width:700px;
+  height:320px;
+  float:left;
+}
+#area2{
+  padding-top: 50px;
+  width:300px;
+  height:300px;
+  float:left;
+}
+#area3{
+  padding:50px;
+  padding-left:100px;
+  width:1000px;
+  float:left;
+}
+#today{
+  margin:20px;
+  width:500px;
+  height:90px;
+}
+.write{
+   width:60px;
+   opacity:0.7;
+
+}
+
+#written{
+  padding-left:20px;
+  margin:20px;
+
+  width:600px;
+  height:200px;
+}
+
+#song{
+  width:600px;
+  height: 80px;
+}
+#songname{
+  font-size:20px; font-weight:400;
+}
+#artistname{
+  padding-top:10px;
+  font-size:15px; font-weight:200;
+}
+#article{
+  padding-top:30px;
+  width:600px;
+  height: 80px;
+  width:550px;
+  overflow:hidden;
+}
+
+
+
+#calander{
+  width:500px;
+  height:500px;
+  padding-bottom:30px;
+}
+
+#playlist{
+  width:350px;
+  height:500px;
+  padding-bottom:30px;
+}
+
+#overflow{
+  position:fixed;
+  overflow: auto;
+  top:70px;
+  bottom:0px;
+  width:1500px;
+}
