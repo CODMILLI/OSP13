@@ -13,7 +13,7 @@
     <div id="leftside">
       <!--로고-->
       <div id="logo">
-          <a href="home.html"><img src = "img/leftsideicon\로고.png" width="71%"></a>
+          <a href="realindex.php?user=<?php print $_GET['user']?>"><img src = "img/leftsideicon\로고.png" width="71%"></a>
       </div>
 
       <!--프로필-->

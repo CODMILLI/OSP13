@@ -12,6 +12,7 @@
   height:22px;
   left:600px; bottom:385px;
   width:500px;
+  font-family: 'Jeju Myeongjo'
 }
 #article_{
   line-height: 1.8em;
@@ -22,4 +23,5 @@ left:600px; bottom:45px;
   width:500px;
   overflow: auto;
   -ms-overflow-style: none; /* IE and Edge */
+  font-family: 'Jeju Myeongjo'
 }

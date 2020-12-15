@@ -5,7 +5,7 @@ body{
     color:#303030;
 }
 .jeju{
-
+  font-family: 'Jeju Myeongjo';
   color:#303030;
 }
 
@@ -46,7 +46,7 @@ body{
   height: 80px;
   font-size: 45px;
   text-align: right;
-  padding-right: 0px;
+  padding-right: 10px;
 }
 .date{
     display:inline-block;
