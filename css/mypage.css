@@ -1,0 +1,106 @@
+
+#myprofile {
+  position: absolute;
+  left: 550px;
+  top: 210px;
+}
+
+#profileback {
+  width : 100%;
+  position: fixed;
+  padding-top: 250px;
+  background-color: #F2F2F2;
+  opacity: 0.6;
+}
+
+.cameraimg {
+    position: absolute;
+    left: 630px;
+    top: 280px;
+}
+
+.success{
+  color:#909090;
+  font-size:13px;
+  background:white;
+    border-radius:14px;
+    padding:10px;
+    margin:3px;
+    border-width: thin;
+    position: fixed;
+    left: 95%;
+    top: 15px;
+}
+
+.info{
+  color : #FE2E64;
+  position: absolute;
+  top: 53%;
+  left : 45.5%;
+}
+
+
+.changeForm{
+  color:#303030;
+  line-height: 1.3em;
+  position:absolute;
+  text-align:center;
+  width: 500px;
+  top:330px;
+  left:340px;
+  border-radius: 15px;
+
+}
+
+.changeForm h2{
+  text-align: center;
+  margin: 30px;
+}
+
+.idForm{
+  border-bottom: 2px solid #adadad;
+  text-align: left;
+  margin: 10px;
+  padding: 10px 10px 10px 10px;
+}
+
+.nickForm{
+  border-bottom: 2px solid #adadad;
+  text-align: left;
+  margin: 10px;
+  padding: 10px 10px 10px 10px;
+}
+
+.introForm{
+  border-bottom: 2px solid #adadad;
+  text-align: left;
+  margin: 10px;
+  padding: 10px 10px 10px 10px;
+}
+
+.id {
+  border:none;
+  outline:none;
+  color: #fc448e;
+  font-size:13px;
+  height:20px;
+  background: none;
+}
+
+.nick {
+  border:none;
+  outline:none;
+  color: #fc448e;
+  font-size:13px;
+  height:20px;
+  background: none;
+}
+
+.intro {
+  border:none;
+  outline:none;
+  color: #fc448e;
+  font-size:13px;
+  height:20px;
+  background: none;
+}
