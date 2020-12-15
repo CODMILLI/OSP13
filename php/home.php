@@ -1,10 +1,3 @@
-<?php
-function dirs_chk($dir){
- $dirs=count(scandir($dir));
- echo $dirs;
-}
-?>
-
 <!DOCTYPE html>
 <html>
 <head>

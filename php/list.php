@@ -23,7 +23,10 @@
    background-repeat:no-repeat;">
   <div class="blur">
     <div id="search">
-            <img src="img/search.png" width=420px>
+            <form name="f1" action="search.php?user=<?php print $this->myfile->user?>" method="post">
+              <input type="text" name="key" minlength="1">
+              <input type="submit">
+            </form>
     </div>
   <?php
   $calym=$this->myfile->ymDir;

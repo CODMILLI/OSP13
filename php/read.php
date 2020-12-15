@@ -21,13 +21,13 @@
      </div>
     <div id="menu">
 			<?php
-				print "<a href=index.php?action=del&user=".$this->myfile->user."&ym=".$this->myfile->ym."&fname=".$this->myfile->getFileName().">삭제</a><br>";
-			?>
-			<img id="more" src="img/more.png" style="width:40px;opacity:0.5;">
+				print "<a href=index.php?action=del&user=".$this->myfile->user."&ym=".$this->myfile->ym."&fname=".$this->myfile->getFileName()."><img src='img/trash.png' width=25px style='opacity:0.2'></a>&nbsp&nbsp&nbsp";
+              print "<a href=index.php?action=writeForm&user=".$this->myfile->user."&ym=".$this->myfile->ym."&fname=".$this->myfile->getFileName()."><img src='img/edit.png' width=25px style='opacity:0.2'><br></a>";
+      ?>
     </div>
 		<div id="date">
     <div class="date"><?php print $ddate[0]?></div>
-		<div class="date"><?php print strtoupper($dday[0])?></div>
+		<div class="date" style="opacity:0.7"><?php print strtoupper($dday[0])?></div>
 	</div>
 
 		<div id='song'>
