@@ -163,7 +163,9 @@
         $top6tags=array_slice($cnt_ary,0,6);
         $tag6=array_keys($top6tags);
         $tagcount=array_values($top6tags);
-        $max_val=max($top6tags);
+        $cnt=count($top6tags);
+        if ($cnt > 0) { $max_val=max($top6tags);}
+        else{$tag6[0]='';}
         print"
         <div class=tagGraph>
         <p id='month_mood'>이번 달 나의 mood 분석<p>
