@@ -155,19 +155,22 @@ $musiccount = 0;
         .style("background","pink");
     </script> -->
 
-      <?php
+        <?php
 
-      $topmoodtags = array();
-      $cnt_ary = array();
-      $cnt_ary = array_count_values($moodtags);
-      arsort($cnt_ary);
-      $tag6 = array();
-      $tagcount = array();
-      $top6tags = array_slice($cnt_ary, 0, 6);
-      $tag6 = array_keys($top6tags);
-      $tagcount = array_values($top6tags);
-      $max_val = max($top6tags);
-      print "
+        $topmoodtags=array();
+        $cnt_ary=array();
+        $cnt_ary=array_count_values($moodtags);
+        arsort($cnt_ary);
+        $tag6=array();
+        $tagcount=array();
+        $top6tags=array_slice($cnt_ary,0,6);
+        $tag6=array_keys($top6tags);
+        $tagcount=array_values($top6tags);
+        $cnt=count($top6tags);
+        if ($cnt > 0) { $max_val=max($top6tags);}
+        else{$tag6[0]='';}
+        print"
+
         <div class=tagGraph>
         <p id='month_mood'>이번 달 나의 mood 분석<p>
         <div class='announcement'>이번 달 일기 기록 횟수는 총 " . $count . "회입니다.<br>#" . $tag6[0] . " (을)를 이번 달에 가장 많이 느끼셨군요!<br>행복하고 좋은 감정뿐 아니라 부정적인 감정 모두 소중한 우리의 감정입니다.<br>당신의 감정과 나날들을 응원합니다!</div>";
