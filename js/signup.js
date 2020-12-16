@@ -6,6 +6,7 @@ function validate() {
     var id = document.getElementById("id");
     var pw = document.getElementById("pw");
     var em = document.getElementById("em");
+    var birth = document.getElementById("bt");
     var warning = document.getElementById("warning");
 
 
@@ -28,17 +29,18 @@ function validate() {
         return false;
     }
 
- function check(re, what, message) {
-  if(re.test(what.value)) {
-      return true;
-  }
-  alert(message);
-  what.value = "";
-  what.focus();
- }
+    function check(re, what, message) {
+    if(re.test(what.value)) {
+        return true;
+    }
+    alert(message);
+    what.value = "";
+    what.focus();
+    }
 
     firebase.auth().createUserWithEmailAndPassword(em.value, pw.value)
     .then((user) => {
+        writeUserData(id, pw, em, birth);
         location.href = "login.html";
     })
     .catch((error) => {
@@ -51,4 +53,12 @@ function validate() {
     });
 }
 
-
+function writeUserData(id, pw, em, birth) {
+    // add data to database
+    firebase.database().ref('members/'+id.value).set({
+        Id: id.value,
+        Pw: pw.value,
+        Email: em.value,
+        Birth: birth.value
+    });
+}
