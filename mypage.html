@@ -4,6 +4,7 @@
 <title> MOODSIC Tracker:: </title>
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="stylesheet" type="text/css" href="css/entirestyle.css">
 <link rel="stylesheet" type="text/css" href="css/framestyle.css">
 <link rel="stylesheet" type="text/css" href="css/bar.css">
@@ -64,53 +65,63 @@
       </div>
     </div>
 
+    <script type="text/javascript" src ="js/mypage.js"  charset=utf-8> </script>
+
+
     <!--페이지 내용-->
     <div id="container">
-      <div class="info">
-        R&B 마스터
-      </div>
-        <div class="info2">
-        여기아이디
-      </div>
 
 
        <div id="profileback">
        </div>
 
-      <div id="myprofile">
-        <img class="primage" src = "https://cdnimg.melon.co.kr/cm2/artistcrop/images/002/61/143/261143_20200508100949_500.jpg?8671d10093fd10038301e96ebcd9a8fd62/melon/resize/416/quality/100/optimize" width="100px" >
-      </div>
-      <img src="img/camera.png" width= "30px" class="cameraimg">
+       <div id="profile">
+        <div id="myprofile">
+          <img class="primage" src = "https://cdnimg.melon.co.kr/cm2/artistcrop/images/002/61/143/261143_20200508100949_500.jpg?8671d10093fd10038301e96ebcd9a8fd62/melon/resize/416/quality/100/optimize" width="100px" >
 
-
-
-        <form action="member_ok.php" method="post" class="changeForm">
-
-        <div class="idForm">
-            <p><label for="id"
-              >ID </label> <br>
-            <input id = "id" class="id" type="text" name="userid"></p>
+          <div class="info2">
+            여기아이디
           </div>
-          <div class="nickForm">
-            <p><label for="nick">닉네임 </label> <br>
-            <input id = "nick" class="intro" type="text" name="usernick"></p>
+          <div class="info">
+            R&B 마스터
           </div>
-          <div class="introForm">
-            <p><label for="intro">소개 </label> <br>
-            <input id = "intro" class="intro" type=text" name="userintro"></p>
+        </div>
+        <input type="file" id="file" style="display:none;">
+        <img src="img/camera.png" width= "30px" id="camera" class="cameraimg">
 
-          </div>
+        <!--파일창 연결-->
+      <script type="text/javascript">
+               document.querySelector("#camera").addEventListener('click',function(){
+                    document.querySelector('#file').click()
+         })</script>
 
-           <div>
-               <button class="success" type="button" onclick="()"> 완료
+          <form action="member_ok.php" method="post" class="changeForm">
+
+            <div class="idForm">
+                <p><label for="id"
+                  >ID </label> <br>
+                <input id = "id" class="id" type="text" name="userid"></p>
+              </div>
+              <div class="nickForm">
+                <p><label for="nick">닉네임 </label> <br>
+                <input id = "nick" class="intro" type="text" name="usernick"></p>
+              </div>
+              <div class="introForm">
+                <p><label for="intro">소개 </label> <br>
+                <input id = "intro" class="intro" type=text" name="userintro"></p>
+
+              </div>
+
+               <div>
+                   <button class="success" type="button" onclick="go();"> 완료</button>
+                </div>
+
             </div>
 
+
+            </div>
+          </form>
         </div>
-
-
-        </div>
-        </form>
-
 
         <!--밑에 재생바-->
           <div id="player">
@@ -167,5 +178,20 @@
         <script type="text/javascript" src ="js/play.js"  charset=utf-8> </script>
         <script type="text/javascript" src ="js/menu.js"  charset=utf-8> </script>
 
+        <script>
+          window.onload = function() {
+            document.querySelector('#id').value = localStorage.id
+            document.querySelector('#nick').value = localStorage.nick
+            document.querySelector('#intro').value = localStorage.intro
+          }
+
+          function go(){
+            localStorage.id = document.querySelector('#id').value
+            localStorage.nick = document.querySelector('#nick').value
+            localStorage.intro = document.querySelector('#intro').value
+            alert('변경이 완료됐습니다.')
+            location.reload()
+          }
+        </script>
       </body>
 </html>
