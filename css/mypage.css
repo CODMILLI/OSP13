@@ -54,17 +54,12 @@
     top: 15px;
 }
 
-.info{
-  color : #FE2E64;
-  position: relative;
-  top: 49%;
-  left : 4.5%;
-}
 
-.info2{
-  color : #303030;
+
+.info{
+  color : #fc448e;
   position: relative;
-  top: 53%;
+  top: 55%;
   left : 4.5%;
 }
 
@@ -107,6 +102,8 @@
   padding: 10px 10px 10px 10px;
 }
 
+
+
 .id {
   border:none;
   outline:none;
@@ -133,3 +130,5 @@
   height:20px;
   background: none;
 }
+
+
