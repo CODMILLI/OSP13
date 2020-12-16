@@ -178,6 +178,30 @@
         <script type="text/javascript" src ="js/play.js"  charset=utf-8> </script>
         <script type="text/javascript" src ="js/menu.js"  charset=utf-8> </script>
 
+        <!-- script part -->
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+            https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-firestore.js"></script>
+
+        <script>
+          // Your web app's Firebase configuration
+          var firebaseConfig = {
+            apiKey: "AIzaSyCdgm-GsL3PSBJeiJdDXvpQ6Wvu12MChOo",
+            authDomain: "osp13-35ad5.firebaseapp.com",
+            databaseURL: "https://osp13-35ad5-default-rtdb.firebaseio.com",
+            projectId: "osp13-35ad5",
+            storageBucket: "osp13-35ad5.appspot.com",
+            messagingSenderId: "92580841928",
+            appId: "1:92580841928:web:8013e99ea0e7c2a41858fd"
+          };
+          // Initialize Firebase
+          firebase.initializeApp(firebaseConfig);
+        </script>
+
         <script>
           window.onload = function() {
             document.querySelector('#id').value = localStorage.id

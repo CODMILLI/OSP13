@@ -1,6 +1,6 @@
 firebase.auth().onAuthStateChanged(function(user) {
-    var user_name = document.getElementById('user-name');
-    var b=document.getElementById("frame");
+var user_name = document.getElementById('user-name');
+var b = document.getElementById("frame");
     if (user) {
         console.log("Alright!");
 
