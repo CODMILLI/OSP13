@@ -1,3 +1,25 @@
+@media screen and (min-width: 1600px){
+  #profile{
+    position: absolute;
+    left: 11%;
+  }
+}
+
+
+@media screen and (min-width: 1800px){
+  #profile{
+    position: absolute;
+    left: 13%;
+  }
+}
+
+
+@media screen and (min-width: 2000px){
+  #profile{
+    position: absolute;
+    left: 15%;
+  }
+}
 
 #myprofile {
   position: absolute;
@@ -34,16 +56,16 @@
 
 .info{
   color : #FE2E64;
-  position: absolute;
-  top: 53%;
-  left : 45.5%;
+  position: relative;
+  top: 49%;
+  left : 6.5%;
 }
 
 .info2{
   color : #303030;
-  position: absolute;
-  top: 49%;
-  left : 45.5%;
+  position: relative;
+  top: 53%;
+  left : 8.5%;
 }
 
 
