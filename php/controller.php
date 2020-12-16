@@ -36,6 +36,9 @@ class Controller{
 			case "download":
 				$this->download();
 				return;
+			case "analysis":
+				$this->Manalysis();
+				break;
 		}
 		require $this->view;
 	}
@@ -44,6 +47,10 @@ class Controller{
 	public function flist(){
 		$this->data = $this->myfile->flist(1);
 		$this->view = "list.php";
+	}
+	public function Manalysis(){
+		$this->data = $this->myfile->flist(1);
+		$this->view = "moodanalysis.php";
 	}
 	public function read(){
 		$this->myfile->setFileName($_GET['fname']);
