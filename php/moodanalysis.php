@@ -21,7 +21,7 @@ $musiccount = 0;
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
   <link href="https://fonts.googleapis.com/earlyaccess/jejumyeongjo.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="../css/entirestyle.css">
-  <link rel="stylesheet" type="text/css" href="css/static.css">
+  <link rel="stylesheet" type="text/css" href="css/analysis.css">
 </head>
 
 <body>
@@ -121,15 +121,25 @@ $musiccount = 0;
         $recent5artist = array();
 
         print "<div class='music_ranking'>
-                <p id='month_music'>최근에 기록한 음악 TOP5</p>";
+                <p id='month_music'>최근에 기록한 음악 TOP3</p>";
 
-        for ($i = 0; $i < 5; $i++) {
+        for ($i = 0; $i < 3; $i++) {
           $recentimg = array_pop($diarymusics_img);
-          array_push($recent5imgs, $recentimg);
+          if($diarymusics_img==null){
+            $recent5imgs[$i]='img/none.jpeg';
+          }
+          else{array_push($recent5imgs, $recentimg);}
           $recenttitle = array_pop($diarymusics_title);
-          array_push($recent5title, $recenttitle);
+          if($diarymusics_title==null){
+            $recent5title[$i]='-';
+          }
+          else{array_push($recent5title, $recenttitle);}
           $recentartist = array_pop($diarymusics_artist);
-          array_push($recent5artist, $recentartist);
+          if($diarymusics_artist==null){
+            $recent5artist[$i]='입력된 노래가 없습니다.';
+          }
+         else {array_push($recent5artist, $recentartist);}
+          
 
           print "<div class='rankingbox'>
                     
