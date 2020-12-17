@@ -31,23 +31,26 @@ $songs = explode('_@_', $songs);
   if($w==-1){
     if(file_exists($file)){
       $str = file_get_contents($file);		//현재 소스파일과 위치가 다르기 때문에 경로를 지정하여
-      $arr = explode("&%$", $str);
+      $arr = explode("&%$", $str, 3);
+      $subarr=  explode("&%$", $arr[2]);
       print "
       <div id='image'>
         <a href='index.php?action=list&user=".$this->myfile->user."&ym=".$this->myfile->ym."'><img id='back' src='img/left-arrow.png' style='opacity:0.3; width:50px; margin: 40px'></a>
-        <img id='img' src='$arr[4]' width=250px>
+        <img id='img' src='$subarr[2]' width=250px>
      </div>
       <div id='song'>
   		<div style='float:left'><img src='../img/playericon/재생.png' width=100px></div>
   		<div style='float:left; padding-top:0px;'>
-  		<p  id='songname'>$arr[2]
-  		<p  id='artistname'>$arr[3]
+  		<p  id='songname'>$subarr[0]
+  		<p  id='artistname'>$subarr[1]
   		</div>
   		</div>
       <img id='line' src='../img/leftsideicon/메뉴_선.png'>
   	<textarea id ='tag_' class='jeju' name='tag' style='background-color:transparent;font-size:15px;border:0;font-family: 'Jeju Myeongjo'; ' placeholder='#태그'>$arr[0]</textarea><br>
   		<textarea id='article_' class='jeju' name='content' style='background-color:transparent;border:0;font-size:15px;font-family: 'Jeju Myeongjo';' placeholder='내용을 입력하세요.' >$arr[1]</textarea><br>
       ";
+      print "
+      <input type='text' name='selectsong' value='".$arr[2]."' style='display:none'>";
     }
       else{
         print "
@@ -68,12 +71,9 @@ $songs = explode('_@_', $songs);
         ";
         print"<div id='modal'>
           <div class='modal_content'>
-            <div style='height:30px; width:300px;'>
-                <br>
-                <p>  &nbsp ▶ 플레이리스트에서 선택하기
-                <p id='dd'></p>
 
-          </div>
+                <p style='text-align:center;'> ▶ Select MOODSIC of the day
+
             <br><br>";
 
 
@@ -81,7 +81,7 @@ $songs = explode('_@_', $songs);
                        foreach ($songs as $s){
                          $songarr = explode('&%$', $s);
                          print
-                         "<div id='s".$i."' class='song' onmouseover='this.style.backgroundColor=`#eaeaea`' onmouseout='this.style.backgroundColor=`#f6f6f6`'>
+                         "<div id='s".$i."' class='song' onmouseover='this.style.backgroundColor=`#e0e0e0`' onmouseout='this.style.backgroundColor=`#efefef`'>
                          <img src='".$songarr[2]."' width=60px style='float:left'>
                          <div style='float:left; padding:13px'>
                            <div class='songname' >".$songarr[0]."</div>
@@ -125,12 +125,15 @@ $songs = explode('_@_', $songs);
     <textarea id ='tag_' class='jeju' name='tag' value='#태그' style='background-color:transparent;border:0;font-family: `Jeju Myeongjo`; font-size:15px;' placeholder='#태그'></textarea><br>
       <textarea id='article_' class='jeju' name='content' style='background-color:transparent;border:0;font-family: `Jeju Myeongjo`;font-size:15px;' placeholder='내용을 입력하세요.' ></textarea><br>
        ";
+       print "
+       <input type='text' name='selectsong' value='".$selected."' style='display:none'>";
      }
+
+
   ?>
 
 
 
-<input type='text' name='selectsong' value='<?php print $selected?>' style="display:none">
 <input type="text" name="fname" value='<?php print substr($_GET['fname'],0,-4)?>' style="display:none">
 
   </div>

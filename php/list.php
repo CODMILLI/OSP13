@@ -24,8 +24,11 @@
   <div class="blur">
     <div id="search">
             <form name="f1" action="search.php?user=<?php print $this->myfile->user?>" method="post">
-              <input type="text" name="key" minlength="1">
+              <input type="submit">
+
+              <input id="keysearch" type="text" name="key" minlength="1">
               <input type="image" src="../img/loupe.png" style="opacity:0.5; width:15px;">
+
             </form>
     </div>
   <?php
