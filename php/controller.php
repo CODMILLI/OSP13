@@ -53,6 +53,7 @@ class Controller{
 	public function write(){
 		$this->myfile->setFileName($_POST['fname'].".txt");
 		$this->myfile->setContent($_POST['content']);
+		$this->myfile->setsong($_POST['selectsong']);
 		$this->myfile->setTag($_POST['tag']);
 		$this->myfile->write();
 		$this->action = "list";

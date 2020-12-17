@@ -25,7 +25,7 @@
     <div id="search">
             <form name="f1" action="search.php?user=<?php print $this->myfile->user?>" method="post">
               <input type="text" name="key" minlength="1">
-              <input type="submit">
+              <input type="image" src="../img/loupe.png" style="opacity:0.5; width:15px;">
             </form>
     </div>
   <?php
@@ -115,7 +115,7 @@ const renderCalendar = () => {
       if (date<10){
         date='0'+date;
       }
-      dates[i]=dates[i]+`<a id="imghref${date}" href="index.php?action=writeForm&user=<?php print $this->myfile->user?>&ym=<?php print $this->myfile->ym?>&fname=<?php print $this->myfile->ym?>.${date}_${yoil[i%7]}.txt">
+      dates[i]=dates[i]+`<a id="imghref${date}" href="index.php?action=writeForm&user=<?php print $this->myfile->user?>&ym=<?php print $this->myfile->ym?>&fname=<?php print $this->myfile->ym?>.${date}_${yoil[i%7]}.txt&w=-1">
         <img id="img${date}" src="img/calander_none.png" style="width:55px; height:55px; border-radius:70px; "
 onmouseover="this.src='img/calander_add.png'" onmouseout="this.src='img/calander_none.png'"></div></a>`;
     }
@@ -180,11 +180,19 @@ const goToday = () => {
 <div id="list">
 <?php
 foreach ($this->data as $f){
-
   $day=explode(".", $f);
   $day=explode("_", $day[2]);
   $content= file_get_contents($this->myfile->ymDir."/".$f);
   $content=explode("&%$", $content);
+
+  print "
+  <script type='text/javascript'>
+      document.getElementById('img".$day[0]."').src= '".$content[4]."';
+      document.getElementById('img".$day[0]."').onmouseover='';
+      document.getElementById('img".$day[0]."').onmouseout='';
+      document.getElementById('imghref".$day[0]."').href= 'index.php?action=read&user=".$this->myfile->user."&ym=".$this->myfile->ym."&fname=".$f."';
+  </script>
+  ";
 
   print "<div class='contentbox'>
     <a href=index.php?action=read&user=".$this->myfile->user."&ym=".$this->myfile->ym."&fname=".$f.">
@@ -206,14 +214,6 @@ foreach ($this->data as $f){
       </div>
     </div></a>
   </div>";
-  print "
-  <script type='text/javascript'>
-      document.getElementById('img".$day[0]."').src= '".$content[4]."';
-      document.getElementById('img".$day[0]."').onmouseover='';
-      document.getElementById('img".$day[0]."').onmouseout='';
-      document.getElementById('imghref".$day[0]."').href= 'index.php?action=read&user=".$this->myfile->user."&ym=".$this->myfile->ym."&fname=".$f."';
-  </script>
-  ";
 
 
 }

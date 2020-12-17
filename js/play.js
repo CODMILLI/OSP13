@@ -25,9 +25,6 @@ function onYouTubeIframeAPIReady() {
         width: 1,
         height:1,
         videoId: playlist[0][3],
-        playerVars: {
-            color: 'white',
-        },
         events: {
             onReady: initialize,
             onStateChange: change
