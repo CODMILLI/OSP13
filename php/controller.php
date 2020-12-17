@@ -36,9 +36,9 @@ class Controller{
 			case "download":
 				$this->download();
 				return;
-				case "analysis":
-					$this->Manalysis();
-					break;
+			case "analysis":
+				$this->Manalysis();
+				break;
 		}
 		require $this->view;
 	}
@@ -48,6 +48,10 @@ class Controller{
 		$this->data = $this->myfile->flist(1);
 		$this->view = "list.php";
 	}
+	public function Manalysis(){
+		$this->data = $this->myfile->flist(1);
+		$this->view = "moodanalysis.php";
+	}
 	public function read(){
 		$this->myfile->setFileName($_GET['fname']);
 		$this->myfile->read();
@@ -55,8 +59,7 @@ class Controller{
 	}
 	public function write(){
 		$this->myfile->setFileName($_POST['fname'].".txt");
-		$this->myfile->setContent($_POST['content']);
-		$this->myfile->setsong($_POST['selectsong']);
+		$this->myfile->setContent($_POST['content']."&%$".$_POST['songname']."&%$".$_POST['artist']."&%$".$_POST['albumart']."&%$".$_POST['youtube']);
 		$this->myfile->setTag($_POST['tag']);
 		$this->myfile->write();
 		$this->action = "list";
@@ -75,10 +78,6 @@ class Controller{
 		$this->data = $this->myfile->flist(2);
 		$this->view = "write.php";
 
-	}
-	public function Manalysis(){
-		$this->data = $this->myfile->flist(1);
-		$this->view = "moodanalysis.php";
 	}
 }
 ?>

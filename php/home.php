@@ -48,7 +48,7 @@
                 <p style="font-size:40px; width:300px;float:left; font-weight:400">오늘의 MOODSIC</p>
               </div>
               <div style="float:left; padding-top:5px; padding-top:24px; padding-left:10px;">
-                <a href="index.php?action=writeForm&user=<?php print $user?>&ym=<?php print $ym ?>&fname=<?php print $date ?>&w=-1">
+                <a href="index.php?action=writeForm&user=<?php print $user?>&ym=<?php print $ym ?>&fname=<?php print $date ?>">
                   <img class="write" src="../img/write.png"></a></div>
             </div>
 

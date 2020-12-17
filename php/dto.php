@@ -10,7 +10,6 @@ class Myfile{
 	public $ymDir;
 	private $fileName;
 	private $content;
-	private $selectsong;
 	private $tag;
 	public $user;
 	public $ym;
@@ -48,13 +47,14 @@ class Myfile{
 		return $this->fileName;
 	}
 
-	public function setsong($selectsong){
-		$this->selectsong = $selectsong;
+	public function setImgName($imgName){
+		$this->imgName = $imgName;
 	}
 
-public function getsong(){
-	return $this->selectsong;
-}
+	public function getImgName(){
+		return $this->imgName;
+	}
+
 	public function setContent($content){
 		$this->content = $content;
 	}
@@ -90,20 +90,21 @@ public function getsong(){
 
 	public function read(){
 		$str = file_get_contents($this->ymDir."/".$this->fileName);		//현재 소스파일과 위치가 다르기 때문에 경로를 지정하여
-		$arr = explode("&%$", $str, 3);
+		$arr = explode("&%$", $str,2);
 		$this->tag= $arr[0];
 		$this->content = $arr[1];
-		$this->selectsong = $arr[2];
 	}
 
 
 	public function write(){
-		$result = $this->tag."&%$".$this->content."&%$".$this->selectsong;			//내용뿐만 아니라 컨텐트와 이미지이름을 $result 담는다
+		$result = $this->tag."&%$".$this->content;			//내용뿐만 아니라 컨텐트와 이미지이름을 $result 담는다
 		file_put_contents($this->ymDir."/".$this->fileName, $result);
 	}
 
 	public function delete(){
 			unlink($this->ymDir."/".$this->fileName);
 	}
+
+
 }
 ?>
