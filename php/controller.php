@@ -76,5 +76,9 @@ class Controller{
 		$this->view = "write.php";
 
 	}
+	public function Manalysis(){
+		$this->data = $this->myfile->flist(1);
+		$this->view = "moodanalysis.php";
+	}
 }
 ?>
