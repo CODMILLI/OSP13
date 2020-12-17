@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> MOODSIC Tracker:: </title>
+<link rel="stylesheet" type="text/css" href="css/entirestyle.css">
+<link rel="stylesheet" type="text/css" href="css/framestyle.css">
+<link rel="stylesheet" type="text/css" href="css/bar.css">
+<link rel="stylesheet" type="text/css" href="css/search.css">
+<link rel="stylesheet" type="text/css" href="css/modal.css">
+<link rel="stylesheet" type="text/css" href="css/share.css">
+</head>
+<body onload="changeScreenSize(500,300)">
+
+    <!--페이지 내용-->
+    <div id="container">
+        <!-- 상단 검색바 -->
+        <div class="box">
+            <div class="container">
+              <input type="search" id="search" placeholder="search" style="border: none; border-bottom: 1px solid #3e3e3e;"/>
+              <button onclick="search_music();"><img src="img/loupe.png" id="search-btn-img"></button>
+            </div>
+        </div>
+        <div class="share-content-container">
+        <h3 style="padding-left: 100px; padding-top: 50px;">공유 다이어리</h3>
+        <hr style="width: 85%; margin-top: 30px; margin-left: 80px; color: #3e3e3e;">
+
+        <!-- 모달창 -->
+        <!-- 공유 다이어리 생성 버튼 -->
+        <button id="open"><img class="add-btn" src="img/add.png" alt=""></button>
+        <!-- 공유 다이어리 생성 모달 -->
+        <div class="modal hidden">
+          <div class="md_overlay"></div>
+          <div class="md_content">
+            <button id="close-modal">x</button>
+            <div class="modal_text">
+              <form method="POST" action="process.php" id="md_form">
+                <div id="new-diary-name">
+                  <label for="input_diary_name">제목</label> 
+                  <input type="text" class="md_input md_input_title" name="title" equired>
+                </div>
+                <br>
+                <div id="new-diary-info">
+                  <label for="input_diary_info">소개</label> 
+                  <input type="text" class="md_input md_input_info" name="info" required>
+                </div>
+                <input type="submit" class="create-btn" value="save">
+              </form>
+            </div>
+            
+          </div>
+        </div>
+    </div>
+    </div>
+
+  <!-- script part -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-firestore.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyCdgm-GsL3PSBJeiJdDXvpQ6Wvu12MChOo",
+        authDomain: "osp13-35ad5.firebaseapp.com",
+        projectId: "osp13-35ad5",
+        storageBucket: "osp13-35ad5.appspot.com",
+        messagingSenderId: "92580841928",
+        appId: "1:92580841928:web:8013e99ea0e7c2a41858fd"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script type="text/javascript" src ="js/play.js"> </script>
+  <script type="text/javascript" src ="js/search.js"> </script>
+  <script type="text/javascript" src ="js/modal.js"> </script>
+  <script type="text/javascript" src ="js/login.js"> </script>
+</body>
+</html>

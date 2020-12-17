@@ -1,0 +1,65 @@
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);﻿
+/** import 영역 **/
+@import url(//fonts.googleapis.com/earlyaccess/jejumyeongjo.css);
+
+
+
+body{
+  font-family: 'NanumSquare', sans-serif;
+  font-weight: 300;
+
+}
+p{
+    color:#303030;
+}
+.jeju{
+  font-family: 'Jeju Myeongjo';
+  color:#303030;
+  line-height: 1.8em;
+}
+#wrapper{
+  background-image:  url(https://cdnimg.melon.co.kr/cm2/album/images/103/46/650/10346650_500.jpg?14a08050b8c6adc879b6e0cf587d456a);
+  position:fixed;
+  left:0px;
+  right:0px;
+  top:0px;
+  bottom:0px;
+  background-size: 1500px 1500px;
+ background-repeat:no-repeat;
+
+}
+.blur{
+  background-color: rgba(255,255,255,.5);
+  -webkit-backdrop-filter:blur(30px);
+  backdrop-filter:blur(30px);
+  height:1500px;
+
+}
+
+#search{
+  width:1200px;
+  height: 90px;
+  left:0;
+  right:0;
+}
+
+
+#calander{
+  position: fixed;
+  left:0px;
+  width:600px;
+  height:100%;
+  padding-bottom:30px;
+
+}
+
+#list{
+  background:red;
+  position: fixed;
+  top:0;
+  left:700px;
+  
+  height:700px;
+  overflow: auto;
+
+}

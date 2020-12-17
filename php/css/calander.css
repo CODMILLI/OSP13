@@ -1,0 +1,78 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;box-sizing: border-box;
+  font-family: 'Jeju Myeongjo';
+}
+
+
+#year, #month{
+  font-size: 30px;
+  font-family: 'bahnschrift SemiCondensed';
+  padding-right:15px;
+  float:left;box-sizing: border-box;
+}
+#year{
+  font-size:25px;
+  opacity: 0.8;box-sizing: border-box;
+}
+
+.nav {
+  display: flex;
+  border: 1px solid #333333;
+  border-radius: 5px;box-sizing: border-box;
+  font-family: 'Jeju Myeongjo';
+}
+
+.nav-btn {
+  width: 28px;
+  height: 30px;
+  border: none;
+  font-size: 13px;
+  line-height: 34px;
+  background-color: transparent;
+  cursor: pointer;box-sizing: border-box;
+  font-family: 'Jeju Myeongjo';
+}
+
+.go-today {
+  width: 75px;
+  border-left: 1px solid #333333;
+  border-right: 1px solid #333333;box-sizing: border-box;
+    font-family: 'Jeju Myeongjo';
+}
+
+.days {
+  display: flex;
+  margin: 25px 0 0px;
+  border-bottom: 1px solid #353535;
+  height: 25px;
+  margin-bottom: 10px;box-sizing: border-box;
+    font-family: 'Jeju Myeongjo';
+}
+
+.day {
+  width: calc(100% / 7);
+  text-align: center;
+  font-size:15px;
+  box-sizing: border-box;
+    font-family: 'Jeju Myeongjo';
+
+}
+
+.dates {
+  display: flex;
+  flex-flow: row wrap;
+  height: 470px;
+  font-size:11px;box-sizing: border-box;
+    font-family: 'Jeju Myeongjo';
+
+}
+
+.date {
+  width: calc(100% / 7);
+  padding-right: 5px;
+  box-sizing: border-box;
+  height:30px;
+    font-family: 'Jeju Myeongjo';
+}

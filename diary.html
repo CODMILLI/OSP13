@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> MOODSIC Tracker:: HOME </title>
+
+</head>
+<body>
+  <div id="wrapper">
+    <div class="blur">
+      <div id="search">
+      </div>
+      <div id ="calander" style="padding-left:80px;padding-right:30px;">
+        <div class="header">
+            <div>
+              <div id="month"></div>
+              <div id="year"></div>
+            </div>
+
+            <div class="nav">
+            <button class="nav-btn go-prev" onclick="prevMonth()">&lt;</button>
+            <button class="nav-btn go-today" onclick="goToday()">Today</button>
+            <button class="nav-btn go-next" onclick="nextMonth()">&gt;</button>
+        </div>
+        </div>
+        <div class="main">
+            <div class="days">
+                <div class="day">Sun</div>
+                <div class="day">Mon</div>
+                <div class="day">Tue</div>
+                <div class="day">Wed</div>
+                <div class="day">Thu</div>
+                <div class="day">Fri</div>
+                <div class="day">Sat</div>
+            </div>
+            <div class="dates">
+            </div>
+        </div>
+      </div>
+      <div id ="list">
+        <div id="bunddle">
+        </div>
+        <div id="boxes">
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script type="text/javascript" src ="js/diary.js" charset="UTF-8"> </script>
+<script type="text/javascript" src ="js/calander.js" charset="UTF-8"> </script>
+
+<link rel="stylesheet" type="text/css" href="css/entirestyle.css">
+<link rel="stylesheet" type="text/css" href="css/diary.css">
+<link rel="stylesheet" type="text/css" href="css/calander.css">
+<link href="https://fonts.googleapis.com/earlyaccess/jejumyeongjo.css" rel="stylesheet">
+<!-- script part -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-firestore.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyCdgm-GsL3PSBJeiJdDXvpQ6Wvu12MChOo",
+        authDomain: "osp13-35ad5.firebaseapp.com",
+        databaseURL: "https://osp13-35ad5-default-rtdb.firebaseio.com",
+        projectId: "osp13-35ad5",
+        storageBucket: "osp13-35ad5.appspot.com",
+        messagingSenderId: "92580841928",
+        appId: "1:92580841928:web:8013e99ea0e7c2a41858fd"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+<script type="text/javascript" src ="js/calander.js"> </script>
+<script type="text/javascript" src ="js/login.js"> </script>
+</html>
