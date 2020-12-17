@@ -1,0 +1,201 @@
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+/** import 영역 **/
+@import url(//fonts.googleapis.com/earlyaccess/jejumyeongjo.css);
+
+#wrapper {
+  background-image: url(../img/white.png),
+    url(https://cdnimg.melon.co.kr/cm2/album/images/103/46/650/10346650_500.jpg?14a08050b8c6adc879b6e0cf587d456a);
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.blur {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: rgba(235, 235, 235, 0.596);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(50px);
+  width: 100%;
+  height: 100%;
+}
+
+.calender {
+  /* background: yellow;
+  border: 1px solid red; */
+  margin-top: 20px;
+  text-align: center;
+}
+.nav {
+  /* background: white;
+    border: 1px solid red; */
+  display: inline-block;
+}
+.prev {
+  float: left;
+  position: relative;
+  top: 20px;
+  right: 10px;
+  /* background:pink;
+      border: 1px solid black; */
+}
+.next {
+  float: left;
+  position: relative;
+  top: 20px;
+  left: 10px;
+  /* background:pink;
+    border: 1px solid black; */
+}
+.date {
+  font-family: "Jeju Myeongjo";
+  float: left;
+  /* background:pink;
+    border: 1px solid black; */
+}
+.music_ranking {
+  /* background: yellow;
+  border: 1px solid red;  */
+  box-sizing: border-box;
+  font-family: "Jeju Myeongjo";
+  position: fixed;
+  left: 0;
+  width: 550px;
+  top: 100px;
+  padding-left: 80px;
+  padding-right: 40px;
+  -ms-overflow-style: none;
+}
+.music_ranking::-webkit-scrollbar{ display:none; }
+
+#month_music {
+  font-size: 25px;
+  font-family: "Jeju Myeongjo";
+  margin-bottom:30px;
+}
+.rankingbox {
+  display: inline-block;
+  margin: 5px;
+  margin-top: 16px;
+  background: rgba(256, 256, 256, 0.5);
+  width: 370px;
+  height: 120px;
+  border-radius: 25px;
+}
+.musicimg {
+  padding: 18px;
+  padding-right: 0px;
+  padding-left: 50px;
+  margin-right: 20px;
+  width: 85px;
+}
+
+.dailylog {
+  float: left;
+  height: 95;
+  opacity: 0.7;
+  overflow: hidden;
+}
+#ranking-num {
+  margin-bottom: 5px;
+}
+.song {
+  float: right;
+  margin-top: 30px;
+  width: 55%;
+  height: 50%;
+}
+.musictitle {
+  height: 14px;
+  width: 350px;
+  overflow: hidden;
+  font-weight: 600;
+  font-size: 16px;
+  font-family: "Jeju Myeongjo";
+}
+.artistname {
+  padding-top: 3.8px;
+  color: #707070;
+  opacity: 0.7;
+  font-size: 13px;
+  font-family: "Jeju Myeongjo";
+}
+
+.tagGraph {
+  /* background: yellow;
+  border: 1px solid red; */
+  position: fixed;
+  top: 100px;
+  bottom: 0;
+  left: 550px;
+  overflow: auto;
+  width: 800px;
+}
+
+#month_mood {
+  font-size: 25px;
+  font-family: "Jeju Myeongjo";
+}
+.announcement {
+  position: absolute;
+  margin-top: 30px;
+  font-family: "Jeju Myeongjo";
+}
+.graph {
+  position: relative;
+  top: 170px;
+  margin-top: 40px;
+  padding-top: 15px;
+  height: 250px;
+  width: 530px;
+  font-family: "Jeju Myeongjo";
+  /* border: 1px solid gray; */
+}
+span {
+  position: absolute;
+  font-size: 12px;
+  line-height: 1.8em;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 15px;
+  background:rgba(205,94,90,0.7);
+  display: inline-block;
+  width: 60px;
+  bottom: 0;
+}
+.graphText {
+  height: 60px;
+  font-family: "Jeju Myeongjo";
+  /* background: pink; */
+}
+.tagsText {
+  width: 60px;
+  /* background:white;
+    border: 1px solid purple; */
+    font-family: "Jeju Myeongjo";
+  text-align: center;
+  position: absolute;
+  display: inline-block;
+  margin-left: 30px;
+  margin-top: 20px;
+  top: 490px;
+}
+.tag {
+    font-family: "Jeju Myeongjo";
+  border-radius: 15px;
+  text-align: center;
+  background: gray;
+  position: absolute;
+  float: right;
+  padding: 5px;
+  top: 160px;
+  color: black;
+  opacity: 0.5;
+  height: 20px;
+  font-size: 16px;
+}
