@@ -32,7 +32,7 @@ a {
 }
 
 .bunddle{
-  opacity:0.8;
+  opacity:0.7;
   float:left;
   height:150px;
 }
@@ -41,7 +41,8 @@ a {
   margin:5px;
   margin-top:12px;
   background: rgba(256,256,256,0.5);
-  width:530px;
+  width:70%;
+  min-width:450px;
   height:124px;
   border-radius:25px;
 
@@ -54,7 +55,9 @@ a {
   color:#575872;
   opacity:0.5;
   height:4px;
-  font-size:13px
+  font-size:13px;
+  text-align:right;
+  width:50%;
 }
 .diaryimg{
   padding:20px;
@@ -65,21 +68,21 @@ a {
 
 .dailylog{
   float:left;
+    width:68%;
   height:95;
   opacity:0.7;
   overflow:hidden;
 }
 .song{
   padding-top:7px;
-  width:350px;
   height:28px;
 }
 .songname{
   height:14px;
-  width:350px;
   overflow:hidden;
   font-weight:600;
   font-size:14px;
+  width:90%;
 }
 .artistname{
   padding-top:3.8px;
@@ -87,40 +90,40 @@ a {
   color: #707070;
   opacity:0.7;
   font-size:12px;
+  width:90%;
 }
 .article{
   padding:8px;
   color: #303030;
-  height: 55px;
-  width: 350px;
+  height: 55px;;
   font-size:12px;
   margin-bottom:10px;
   font-weight:400;
   line-height: 1.4em;
+  width:95%;
 }
 
 #list{
   position:fixed;
   top:60px; bottom:0;
-  left:550px;
+  left:520px;
+  min-width:600px;
   overflow:auto;
-  width:800px;
 }
 #calander{
   box-sizing: border-box;
   font-family: 'Jeju Myeongjo';
   position:fixed;
   left:0;
-  width:550px;
-  top:100px;
-  padding-left:80px;
+  width:530px;
+  top:120px;
+  padding-left:70px;
   padding-right:40px;
 }
 
 
 
 #wrapper{
-
   position:fixed;
   left:0px;
   right:0px;
@@ -131,7 +134,7 @@ a {
   position:fixed;
   left:0;
   top:0;
-  background-color: rgba(235,235,235,.6);
+  background-color: rgba(245,245,245,.75);
   -webkit-backdrop-filter:blur(80px);
   backdrop-filter:blur(80px);
   width:100%;
@@ -140,19 +143,17 @@ a {
 
 #search{
   position: fixed;
-    width:500px;
-    height: 80px;
-    top:30px;
-    left:100px;"
-    background-color:transparent;
+  margin:40px 0 30px 50px;
+  width:1000px;
 }
 
 #keysearch{
   background-color:transparent;
-  width:300px;
-  height:23px;
-  padding-left:5px;
-  border:3px solid rgba(255, 255, 255,.7);
+  width:380px;
+  height:25px;
+  margin: 10px 10px 0 10px;
+  border:3px solid rgba(200, 200, 200,.9);
   border-radius:70px;
+  padding-left:10px;
 }
 input:focus {outline:none;}

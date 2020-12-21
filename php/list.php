@@ -13,8 +13,10 @@
     ?>
 <html>
 <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <link rel="stylesheet" type="text/css" href="cs.css">
   <script src="//code.jquery.com/jquery.min.js"></script>
+
   <link href="https://fonts.googleapis.com/earlyaccess/jejumyeongjo.css" rel="stylesheet">
 </head>
 <body>
@@ -24,11 +26,8 @@
   <div class="blur">
     <div id="search">
             <form name="f1" action="search.php?user=<?php print $this->myfile->user?>" method="post">
-              <input type="submit">
-
-              <input id="keysearch" type="text" name="key" minlength="1">
-              <input type="image" src="../img/loupe.png" style="opacity:0.5; width:15px;">
-
+              <input id="keysearch" type="text" name="key" minlength="1"></input>
+              <input type="image" src="../img/loupe.png" style="opacity:0.5; width:15px;"></input>
             </form>
     </div>
   <?php
@@ -36,7 +35,7 @@
   $calym=explode("/",$calym);
   $calym=explode(".",$calym[2]);
   ?>
-<div id="calander" >
+<div id="calander" style="display:none">
   <div class="header">
               <div>
                 <div id="month"></div>
@@ -119,7 +118,7 @@ const renderCalendar = () => {
         date='0'+date;
       }
       dates[i]=dates[i]+`<a id="imghref${date}" href="index.php?action=writeForm&user=<?php print $this->myfile->user?>&ym=<?php print $this->myfile->ym?>&fname=<?php print $this->myfile->ym?>.${date}_${yoil[i%7]}.txt&w=-1">
-        <img id="img${date}" src="img/calander_none.png" style="width:55px; height:55px; border-radius:70px; "
+        <img id="img${date}" src="img/calander_none.png" style="width:55px; border-radius:70px; "
 onmouseover="this.src='img/calander_add.png'" onmouseout="this.src='img/calander_none.png'"></div></a>`;
     }
     else {
@@ -147,8 +146,6 @@ const prevMonth = () => {
     month="0"+month;
   }
   location.replace("index.php?action=list&user=<?php print $user?>&ym="+year+"."+month);
-  renderCalendar();
-
 }
 
 const nextMonth = () => {
@@ -159,7 +156,6 @@ const nextMonth = () => {
     month="0"+month;
   }
   location.replace("index.php?action=list&user=<?php print $user?>&ym="+year+"."+month);
-  renderCalendar();
 }
 
 const goToday = () => {
@@ -175,7 +171,6 @@ const goToday = () => {
     month="0"+month;
   }
   location.replace("index.php?action=list&user=<?php print $user?>&ym="+year+"."+month);
-  renderCalendar();
 }
 
 </script>
@@ -207,13 +202,14 @@ foreach ($this->data as $f){
     <img class='bunddle' src='img/bunddle.png'>
       <a href=index.php?action=read&user=".$this->myfile->user."&ym=".$this->myfile->ym."&fname=".$f."><div class='box'>
       <div class='tag'>".$content[0]."</div>
+      <div>
             <img class='diaryimg' src='".$content[4]."'>
         <div class='dailylog'>
           <div class='song'>
             <div class='songname'> ▶ &nbsp ".$content[2]."</div>
             <div class='artistname'>- ".$content[3]."</div>
           </div>
-        <div class='article'>".$content[1]."</div>
+        <div class='article'>".$content[1]."</div></div>
       </div>
     </div></a>
   </div>";
@@ -221,6 +217,7 @@ foreach ($this->data as $f){
 
 }
 ?>
+<script>document.getElementById("calander").style.display='inline';</script>
 </div>
 </div>
 </div>

@@ -25,3 +25,8 @@ $('#recommend').on('click', function () {
   var userid=document.getElementById("user-name").innerText;
   b.src="moodrecommend.html";
 });
+$('#profile-edit').on('click', function () {
+  var b=document.getElementById("frame");
+  var userid=document.getElementById("user-name").innerText;
+  b.src="mypage.html";
+});

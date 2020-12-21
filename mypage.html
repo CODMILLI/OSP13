@@ -34,160 +34,55 @@
     <script type="text/javascript" src ="js/login.js"  charset=utf-8> </script>
 </head>
 <body>
-  <div id="app">
-    <!--왼쪽-->
-    <div id="leftside">
-      <!--로고-->
-      <div id="logo">
-          <a href="index.html"><img src = "img/leftsideicon\로고.png" width="71%"></a>
-      </div>
+
+         <div id="profileback">
+         </div>
+
+         <div id="profile">
+          <div id="myprofile">
+            <img class="primage" src = "https://img.livescore.co.kr/data/editor/1907/280fe0924e13ed74d68fd611b40e5247_1562919903_4879.jpg" width="100px" >
 
 
-  <!--메뉴-->
-      <div id="menu">
-        <div class="menu">
-        </div>
-        <div class="menu">
-          <a href="index.html"><img id="home" src = "img/leftsideicon\메뉴_1.png" width="83%"></a>
-          <img id="diary"src = "img/leftsideicon\메뉴_2.png" width="83%">
-          <img src = "img/leftsideicon\메뉴_3.png" width="83%">
-        </div>
-          <img src = "img/leftsideicon\메뉴_선.png" width="70%" style="opacity:0.5">
-        <div class="menu">
-          <img src = "img/leftsideicon\메뉴_4.png" width="83%">
-        <img src = "img/leftsideicon\메뉴_5.png" width="83%">
-        </div>
-        <img src = "img/leftsideicon\메뉴_선.png" width="70%" style="opacity:0.5">
-        <div class="menu">
-            <img id="share" src = "img/leftsideicon\메뉴_6.png" width="83%">
-        </div>
-    </div>
-
-    <script type="text/javascript" src ="js/mypage.js"  charset=utf-8> </script>
-
-
-    <!--페이지 내용-->
-    <div id="container">
- 
-
-       <div id="profileback">
-       </div>
-
-       <div id="profile">
-        <div id="myprofile">
-          <img class="primage" src = "https://cdnimg.melon.co.kr/cm2/artistcrop/images/002/61/143/261143_20200508100949_500.jpg?8671d10093fd10038301e96ebcd9a8fd62/melon/resize/416/quality/100/optimize" width="100px" >
-
-        
-          <div class="info">
-            R&B 마스터
+            <div class="info">
+              R&B 마스터
+            </div>
           </div>
-        </div>
-        <input type="file" id="file" style="display:none;">
-        <img src="img/camera.png" width= "30px" id="camera" class="cameraimg">
+          <input type="file" id="file" style="display:none;">
+          <img src="img/camera.png" width= "30px" id="camera" class="cameraimg">
 
-        <!--파일창 연결-->
-      <script type="text/javascript">
-               document.querySelector("#camera").addEventListener('click',function(){
-                    document.querySelector('#file').click()
-         })</script>
+          <!--파일창 연결-->
+        <script type="text/javascript">
+                 document.querySelector("#camera").addEventListener('click',function(){
+                      document.querySelector('#file').click()
+           })</script>
 
-          <form action="member_ok.php" method="post" class="changeForm">
+            <form action="member_ok.php" method="post" class="changeForm">
 
-          
-              <div class="nickForm">
-                <p><label for="nick">닉네임 </label> <br>
-                <input id = "nick" class="nick" type="text" name="usernick"></p>
-              </div>
-              <div class="introForm">
-                <p><label for="intro">소개 </label> <br>
-                <input id = "intro" class="intro" type="text" name="userintro"></p>
-              </div>
 
-             <div class="idForm">
-                <p><label for="id"
-                  >좋아하는 가수 </label> <br>
-                <input id = "id" class="id" type="text" name="usersinger"></p>
-              </div>
-
-               <div>
-                   <button class="success" type="button" onclick="go();"> 완료</button>
+                <div class="nickForm">
+                  <p><label for="nick">닉네임 </label> <br>
+                  <input id = "nick" class="nick" type="text" name="usernick"></p>
+                </div>
+                <div class="introForm">
+                  <p><label for="intro">소개 </label> <br>
+                  <input id = "intro" class="intro" type="text" name="userintro"></p>
                 </div>
 
-            </div>
-          </form>
-        
+               <div class="idForm">
+                  <p><label for="id"
+                    >좋아하는 가수 </label> <br>
+                  <input id = "id" class="id" type="text" name="usersinger"></p>
+                </div>
 
-        <!--밑에 재생바-->
-          <div id="player">
-            <div id="playerBlur">  <!--블러필터-->
-            <div id="albumartarea">
-              <a href="album_info.html"><img id="p_albumart" src= "img/playericon/none.png"  width=70px ></a>
-            </div>
+                 <div>
+                     <button class="success" type="button" onclick="go();"> 완료</button>
+                  </div>
 
-            <div id="songarea">
-              <div id="songname"><a href="song_info.html"> - </a></div>
-
-              <div id="artistname"><a href="artist_info.html"> - </a></div>
-            </div>
-
-            <div id="playlist"><img src="img/playericon/playlist.png" height=60px></div>
-
-            <div id="controller">
-              <img id="prev" src="img/playericon/앞으로.png" style="opacity:0.6" onmouseover="this.style.opacity='0.9'" onmouseout = "this.style.opacity='0.6'" >
-              <img id="play" src="img/playericon/재생.png" height=95px style="opacity:0.8" onmouseover="this.style.opacity='1'" onmouseout = "this.style.opacity='0.9'">
-              <img id="next" src="img/playericon/뒤로.png" style="opacity:0.6" onmouseover="this.style.opacity='0.9'" onmouseout = "this.style.opacity='0.6'">
-            </div>
-
-            <div id="volume"   style="opacity:0.7" onmouseover="this.style.opacity='0.8'" onmouseout = "this.style.opacity='0.7'">
-              <img id="volumeicon" src="img/playericon/volume.png" height=50px>
-            </div>
-
-            <div id="option">
-              <div id="loop" style="opacity: 0.9;">  <img src="img/playericon/repeat.png" height=50px></div>
-              <div id="shuffle" style="opacity: 0.4;"><img src="img/playericon/shuffle.png" height=50px></div>
-            </div>
-            <div id="playing_bar">  <!--재생바-->
-              <div id="bar">
-                <input type="range" id="progress-bar" value="0"  onInput="dragCalculation(this.value)">
               </div>
-              <div id="time">   <!--시간진행도-->
-                <div id="ct"><p id="current-time">0:00</div>
-                <div id="d"><p id="duration">0:00</div>
-              </div>
-              </div>
-          </div>
-        </div>
-        <div id=volume_popup>
-          <div id=aaa>
-          <input id="volume_bar" type="range" oninput="volumeiconchange(this.value)">
-
-          </div>
-        </div>
-
-        <div id="video-placeholder" style="opacity: 0 ;"></div>
-
-
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>  <!--유튜브 api-->
-        <script src="https://www.youtube.com/iframe_api"></script> <!--유튜브 api-->
+            </form>
         <script type="text/javascript" src ="js/play.js"  charset=utf-8> </script>
         <script type="text/javascript" src ="js/menu.js"  charset=utf-8> </script>
 
-        <script type="text/javascript">
-          window.onload = function() {
-            document.querySelector('#id').value = localStorage.id
-            document.querySelector('#nick').value = localStorage.nick
-            document.querySelector('#intro').value = localStorage.intro
-        
-          }
 
-          function go(){
-            localStorage.id = document.querySelector('#id').value
-            localStorage.nick = document.querySelector('#nick').value
-            localStorage.intro = document.querySelector('#intro').value
-            alert('변경이 완료됐습니다.')
-            location.reload()
-          }
-        </script>
       </body>
 </html>
-

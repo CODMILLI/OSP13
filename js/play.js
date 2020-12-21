@@ -2,7 +2,7 @@
 var player,
     time_update_interval = 0;
 
-var num=4;
+var num=12;
 var list=[
 ["불꽃놀이 (Remember Me)", "오마이걸", "https://cdnimg.melon.co.kr/cm/album/images/102/02/711/10202711_500.jpg?f6a4b682ad0d0799c509f22940434d7f/melon/quality/80/optimize", "UAshqNflYMY" ],
 
@@ -10,7 +10,23 @@ var list=[
 
 ["butterfly", "이달의 소녀", "https://cdnimg.melon.co.kr/cm/album/images/102/52/794/10252794_500.jpg?60cad57f0168f495cca7941da4fcdab5/melon/quality/80/optimize", "fvlbaW4YWf8"],
 
-["밤하늘의 별을", "경서", "https://cdnimg.melon.co.kr/cm2/album/images/105/18/234/10518234_20201113150500_500.jpg?14229bd15eb93dec69341e7d2a01e9ab/melon/quality/80/optimize", "S_0me7vYyeU"]
+["밤하늘의 별을", "경서", "https://cdnimg.melon.co.kr/cm2/album/images/105/18/234/10518234_20201113150500_500.jpg?14229bd15eb93dec69341e7d2a01e9ab/melon/quality/80/optimize", "S_0me7vYyeU"],
+
+['야간비행 (魔女の花)', '백예린 (Yerin Baek)', '//image.genie.co.kr/Y/IMAGE/IMG_ALBUM/081/173/794/81173794_1552885289680_1_600x600.JPG/dims/','FIsCYzu_1Gc'],
+
+['보라빛 밤 (pporappippam)', '선미', '//image.genie.co.kr/Y/IMAGE/IMG_ALBUM/081/487/607/81487607_1593415876116_1_600x600.JPG/dims/','sGRYm1lE6nQ'],
+
+['Happy', '태연 (TAEYEON)', '//image.genie.co.kr/Y/IMAGE/IMG_ALBUM/081/432/808/81432808_1588574611784_1_600x600.JPG/dims/', '1u8_4-tCSLk'],
+
+['Rest', '백예린 (Yerin Baek)', '//image.genie.co.kr/Y/IMAGE/IMG_ALBUM/081/329/064/81329064_1575961779895_1_600x600.JPG/dims/','IqfFZ5cJ-WU'],
+
+['Hi High', '이달의 소녀', '//image.genie.co.kr/Y/IMAGE/IMG_ALBUM/081/091/967/81091967_1534753034860_1_600x600.JPG/dims/', 'CjuX1ohkde8'],
+
+['행성 (This Night)', '그루비룸 (GroovyRoom)', '//image.genie.co.kr/Y/IMAGE/IMG_ALBUM/081/154/580/81154580_1548746445689_1_600x600.JPG/dims/', 'h2KaeAiDVwI'],
+
+['Would U', 'Red Velvet (레드벨벳)', '//image.genie.co.kr/Y/IMAGE/IMG_ALBUM/080/934/659/80934659_1490870585934_1_600x600.JPG/dims/','P4bR9V6joDA'],
+
+['홀로', '이하이', '//image.genie.co.kr/Y/IMAGE/IMG_ALBUM/081/510/320/81510320_1595490795863_1_600x600.JPG/dims/','jKif0JIC7LE']
 ];
 
 var playlist=list;

@@ -30,8 +30,8 @@ img{
 /*메뉴 스크롤 */
 
 
-#logo{ margin-top: 25px; margin-left:8px; }  /**/
-#profile{ margin-top:10px; margin-bottom:5px; text-align:center;}
+#logo{ margin-top: 40px; margin-left:8px; }  /**/
+#profile{ margin-top:25px; margin-bottom:5px; text-align:center;}
 
 .primage{
   border-radius: 70px;
@@ -66,9 +66,9 @@ img{
   right:0; bottom:0; left:0;
   position:fixed;
   height:90px;
-  background-color: rgba(220,220,220,.45);
-  -webkit-backdrop-filter:blur(100px) saturate(70%);
-  backdrop-filter:blur(100px) saturate(70%);
+  background-color: rgba(180,180,180,.75);
+  -webkit-backdrop-filter:blur(100px) saturate(60%);
+  backdrop-filter:blur(100px) saturate(60%);
 }
 
 /*앨범아트 부분*/

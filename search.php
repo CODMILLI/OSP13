@@ -26,9 +26,8 @@
   <div class="blur">
     <div id="search">
       <form name="f2" action="search.php?user=<?php print $user?>" method="post">
-        <input id="keysearch" type="text" name="key" value="<?php print $keyword ?>">
+        <input id="keysearch" type="text" name="key" value=<?php print $keyword?>>
         <input type="image" src="../img/loupe.png" style="opacity:0.5; width:15px;">
-
       </form>
     </div>
 

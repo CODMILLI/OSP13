@@ -74,14 +74,14 @@ $songs = explode('_@_', $songs);
 
                 <p style='text-align:center;'> ▶ Select MOODSIC of the day
 
-            <br><br>";
+            <br><br><div id='songss'>";
 
 
                        $i=0;
                        foreach ($songs as $s){
                          $songarr = explode('&%$', $s);
                          print
-                         "<div id='s".$i."' class='song' onmouseover='this.style.backgroundColor=`#e0e0e0`' onmouseout='this.style.backgroundColor=`#efefef`'>
+                         "<div id='s".$i."' class='song' onmouseover='this.style.backgroundColor=`#e4e4e4`' onmouseout='this.style.backgroundColor=`#efefef`'>
                          <img src='".$songarr[2]."' width=60px style='float:left'>
                          <div style='float:left; padding:13px'>
                            <div class='songname' >".$songarr[0]."</div>
@@ -91,9 +91,13 @@ $songs = explode('_@_', $songs);
                          $i++;
 
                        }
-         print"</div><div class='modal_layer'></div>";
+         print"</div></div><div class='modal_layer'></div>";
          print"
          <script>
+         $('.modal_layer').on('click', function () {
+         location.replace('index.php?action=list&user=".$this->myfile->user."&ym=".$this->myfile->ym."');
+       });
+
          $('.song').on('click', function () {
            var a= $(this).attr('id');
            a=a.substr(1);

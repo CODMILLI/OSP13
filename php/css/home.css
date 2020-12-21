@@ -17,52 +17,51 @@ p{
 .jeju{
   font-family: 'Jeju Myeongjo';
   color:#303030;
-  line-height: 1.3em;
+  line-height: 1.5em;
 }
 #wrapper{
   position:fixed;
   left:0px;
-  right:0px;
-  top:0px;
+  top:-34%;
   bottom:0px;
+  width:100%;
 }
 .blur{
   position:fixed;
   left:0;
   top:0;
-  background-color: rgba(235,235,235,.3);
-  -webkit-backdrop-filter:blur(20px);
-  backdrop-filter:blur(20px);
+  background-color: rgba(235,235,235,.2);
+  -webkit-backdrop-filter:blur(40px);
+  backdrop-filter:blur(40px);
   width:100%;
   height:100%;
 }
 
 #search{
-  width:1200x;
-  height: 90px;
-  left:0;
-  right:0;
+  width:1100px;
+  margin:40px 0 30px 50px;
 }
 #area1{
   padding-left:80px;
   width:700px;
-  height:320px;
+  height:350px;
   float:left;
 }
 #area2{
-  padding-top: 50px;
-  width:300px;
+  padding-top: 40px;
+  width:23%;
   height:300px;
   float:left;
 }
 #area3{
   padding:50px;
   padding-left:100px;
-  width:1000px;
+  width:1100px;
   float:left;
 }
 #today{
   margin:20px;
+  margin-top:10px;
   width:500px;
   height:90px;
 }
@@ -93,8 +92,8 @@ p{
 }
 #article{
   padding-top:30px;
-  width:600px;
-  height: 80px;
+  width:35%;
+  height: 70px;
   width:550px;
   overflow:hidden;
 }
@@ -116,7 +115,28 @@ p{
 #overflow{
   position:fixed;
   overflow: auto;
-  top:70px;
+  top:0px;
   bottom:0px;
   width:1500px;
+}
+
+.tag{
+    border: 2px solid #d3d3d3;
+    border-radius:16px;
+    float:left;
+    padding:10px;
+    margin:5px;
+    font-size:15px;
+}
+
+#songsearch{
+  background-color:transparent;
+  width:365px;
+  height:17px;
+  margin:10px;
+  border:3px solid rgba(230, 230, 230,.9);
+  border-radius:70px;
+  font-family: 'Jeju Myeongjo';
+    padding: 2px;
+  padding-left: 10px;
 }

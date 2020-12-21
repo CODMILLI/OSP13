@@ -63,16 +63,17 @@
 .dates {
   display: flex;
   flex-flow: row wrap;
-  height: 470px;
+  height: 430px;
   font-size:11px;box-sizing: border-box;
     font-family: 'Jeju Myeongjo';
 
 }
 
 .date {
+  height:30px;
   width: calc(100% / 7);
   padding-right: 5px;
   box-sizing: border-box;
-  height:30px;
+
     font-family: 'Jeju Myeongjo';
 }
