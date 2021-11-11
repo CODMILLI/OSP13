@@ -50,7 +50,7 @@ and named it in the sense of recording a day with music that can express feeling
 <b>Diary Analysis Page</b>
 - 작성한 일기의 태그, 노래 바탕으로 분석 결과 제공
 
-<b>Music Recommandation Page</b>
+<b>Music Recommendation Page</b>
 
 
 <br>
