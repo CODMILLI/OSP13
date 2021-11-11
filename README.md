@@ -25,6 +25,13 @@ and named it in the sense of recording a day with music that can express feeling
 <b>Login Page</b>
 - 로그인/회원가입
 
+<b>Music Player</b>
+- 재생/일시정지
+- 이전곡/다음곡
+- 셔플/반복 on/off
+- 소리 조절
+- 재생바 조절
+
 <b>Main Page</b>
 - 오늘 내가 기록한 일기를 볼 수 있음 (그에 따라 테마도 변경)
 - 인기 태그 노출
